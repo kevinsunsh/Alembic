@@ -4,11 +4,10 @@
 
 import json
 
-Import('parentEnv', 'alembicFlags', 'replaceBin', 'mathExt', 'utilExt')
+Import('env', 'alembicFlags', 'replaceBin', 'mathExt', 'utilExt')
 
 extName = 'Alembic'
 
-env = parentEnv.CloneSubStage(extName)
 env.MergeFlags(alembicFlags)
 
 klFiles = [
