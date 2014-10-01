@@ -25,15 +25,21 @@ building
 ========
 
 A scons (http://www.scons.org/) build script is provided. Alembic depends on
-* A static build of Alembic (http://www.alembic.io/)
 * A static build of boost (http://www.boost.org/), version 1.55 or higher.
+* A static build of zlib (http://www.zlib.net/), version 1.2.8 or higher.
+* A static build of hdf5 (http://www.hdfgroup.org/HDF5/), version 1.8.7 or higher.
+* A static build of Alembic (http://www.alembic.io/), version 1.5.3 or higher.
 
 To inform scons where to find the Fabric Engine includes as well as the thirdparty libraries, you need to set the following environment variables:
 
 * FABRIC_EDK_DIR: Should point to Fabric Engine's EDK folder.
 * BOOST_INCLUDE: Should point to the boost include folder.
-* ALEMBIC_INCLUDE: Should point to the Alembic include folder.
 * BOOST_LIBRARY: Should point to the boost library folder.
+* ZLIB_INCLUDE: Should point to the zlib include folder.
+* ZLIB_LIBRARY: Should point to the zlib library folder.
+* HDF5_INCLUDE: Should point to the hdf5 include folder.
+* HDF5_LIBRARY: Should point to the hdf5 library folder.
+* ALEMBIC_INCLUDE: Should point to the Alembic include folder.
 * ALEMBIC_LIBRARY: Should point to the Alembic library folder.
 
 The temporary files will be built into the *build* folder, while the structured output files will be placed in the *stage* folder.
