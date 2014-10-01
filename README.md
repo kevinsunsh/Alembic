@@ -12,7 +12,7 @@ This extension has been built and tested against Fabric Engine 1.13.0. Higher re
 structure
 =========
 
-The Alembic extension uses the KL2EDK tool to generate the required C++ code out of a json codegen file. This makes it easy to add functionality to the extension later, or support future versions of liblas. You won't find any .cpp files in the *src* folder, the source code for certain non-automatic function bodies can be found in the .codegen.json file in the *src* folder.
+The Alembic extension uses the KL2EDK tool to generate the required C++ code out of a json codegen file. This makes it easy to add functionality to the extension later, or support future versions of Alembic. You won't find any .cpp files in the *src* folder, the source code for certain non-automatic function bodies can be found in the .codegen.json file in the *src* folder.
 
 The latest KL2EDK documentation can be found here: http://documentation.fabricengine.com/FabricEngine/latest/HTML/ExtensionAuthoringGuide/kl2edk.html
 
@@ -37,8 +37,6 @@ To inform scons where to find the Fabric Engine includes as well as the thirdpar
 * ALEMBIC_LIBRARY: Should point to the Alembic library folder.
 
 The temporary files will be built into the *build* folder, while the structured output files will be placed in the *stage* folder.
-
-Note: The fabric.sh exists purely for Fabric Engine internal use.
 
 testing
 =======
