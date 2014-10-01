@@ -1,0 +1,47 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicONuPatchSample {
+  Data handle;
+};
+
+function AlembicONuPatchSample() = "AlembicONuPatchSample_construct";
+function ~AlembicONuPatchSample() = "AlembicONuPatchSample_free";
+
+function Vec3<> AlembicONuPatchSample.getPositions() = "AlembicONuPatchSample_getPositions";
+function AlembicONuPatchSample.setPositions!(Vec3 values<>) = "AlembicONuPatchSample_setPositions";
+function Float32<> AlembicONuPatchSample.getPositionWeights() = "AlembicONuPatchSample_getPositionWeights";
+function AlembicONuPatchSample.setPositionWeights!(Float32 values<>) = "AlembicONuPatchSample_setPositionWeights";
+function SInt32 AlembicONuPatchSample.getNu() = "AlembicONuPatchSample_getNu";
+function AlembicONuPatchSample.setNu!(SInt32 value) = "AlembicONuPatchSample_setNu";
+function SInt32 AlembicONuPatchSample.getNv() = "AlembicONuPatchSample_getNv";
+function AlembicONuPatchSample.setNv!(SInt32 value) = "AlembicONuPatchSample_setNv";
+function SInt32 AlembicONuPatchSample.getUOrder() = "AlembicONuPatchSample_getUOrder";
+function AlembicONuPatchSample.setUOrder!(SInt32 value) = "AlembicONuPatchSample_setUOrder";
+function SInt32 AlembicONuPatchSample.getVOrder() = "AlembicONuPatchSample_getVOrder";
+function AlembicONuPatchSample.setVOrder!(SInt32 value) = "AlembicONuPatchSample_setVOrder";
+function Float32<> AlembicONuPatchSample.getUKnot() = "AlembicONuPatchSample_getUKnot";
+function AlembicONuPatchSample.setUKnot!(Float32 values<>) = "AlembicONuPatchSample_setUKnot";
+function Float32<> AlembicONuPatchSample.getVKnot() = "AlembicONuPatchSample_getVKnot";
+function AlembicONuPatchSample.setVKnot!(Float32 values<>) = "AlembicONuPatchSample_setVKnot";
+function AlembicOVec2VfGeomParamSample AlembicONuPatchSample.getUVs() = "AlembicONuPatchSample_getUVs";
+function AlembicONuPatchSample.setUVs!(AlembicOVec2VfGeomParamSample values) = "AlembicONuPatchSample_setUVs";
+function AlembicOVec3NfGeomParamSample AlembicONuPatchSample.getNormals() = "AlembicONuPatchSample_getNormals";
+function AlembicONuPatchSample.setNormals!(AlembicOVec3NfGeomParamSample values) = "AlembicONuPatchSample_setNormals";
+function Box3 AlembicONuPatchSample.getSelfBounds() = "AlembicONuPatchSample_getSelfBounds";
+function AlembicONuPatchSample.setSelfBounds!(Box3 bounds) = "AlembicONuPatchSample_setSelfBounds";
+function Vec3<> AlembicONuPatchSample.getVelocities() = "AlembicONuPatchSample_getVelocities";
+function AlembicONuPatchSample.setVelocities!(Vec3 values<>) = "AlembicONuPatchSample_setVelocities";
+function AlembicONuPatchSample.setTrimCurve!(SInt32 nLoops, SInt32 nCurves<>, SInt32 n<>, SInt32 order<>, Float32 knot<>, Float32 min<>, Float32 max<>, Float32 u<>, Float32 v<>, Float32 w<>) = "AlembicONuPatchSample_setTrimCurve";
+function SInt32 AlembicONuPatchSample.getTrimNumLoops() = "AlembicONuPatchSample_getTrimNumLoops";
+function SInt32<> AlembicONuPatchSample.getTrimNumCurves() = "AlembicONuPatchSample_getTrimNumCurves";
+function SInt32<> AlembicONuPatchSample.getTrimNumVertices() = "AlembicONuPatchSample_getTrimNumVertices";
+function SInt32<> AlembicONuPatchSample.getTrimOrder() = "AlembicONuPatchSample_getTrimOrder";
+function Float32<> AlembicONuPatchSample.getTrimKnot() = "AlembicONuPatchSample_getTrimKnot";
+function Float32<> AlembicONuPatchSample.getTrimMin() = "AlembicONuPatchSample_getTrimMin";
+function Float32<> AlembicONuPatchSample.getTrimMax() = "AlembicONuPatchSample_getTrimMax";
+function Float32<> AlembicONuPatchSample.getTrimU() = "AlembicONuPatchSample_getTrimU";
+function Float32<> AlembicONuPatchSample.getTrimV() = "AlembicONuPatchSample_getTrimV";
+function Float32<> AlembicONuPatchSample.getTrimW() = "AlembicONuPatchSample_getTrimW";
+function Boolean AlembicONuPatchSample.hasTrimCurve() = "AlembicONuPatchSample_hasTrimCurve";

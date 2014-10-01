@@ -1,0 +1,51 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicCameraSample {
+  Data handle;
+};
+
+function AlembicCameraSample() = "AlembicCameraSample_construct";
+function ~AlembicCameraSample() = "AlembicCameraSample_free";
+
+function AlembicCameraSample(Float64 top, Float64 bottom, Float64 left, Float64 right) = "AlembicCameraSample_construct4Args";
+
+function AlembicCameraSample.getScreenWindow?(io Float64 top, io Float64 bottom, io Float64 left, io Float64 right) = "AlembicCameraSample_getScreenWindow";
+function Float64 AlembicCameraSample.getFocalLength() = "AlembicCameraSample_getFocalLength";
+function AlembicCameraSample.setFocalLength!(Float64 value) = "AlembicCameraSample_setFocalLength";
+function Float64 AlembicCameraSample.getHorizontalAperture() = "AlembicCameraSample_getHorizontalAperture";
+function AlembicCameraSample.setHorizontalAperture!(Float64 value) = "AlembicCameraSample_setHorizontalAperture";
+function Float64 AlembicCameraSample.getHorizontalFilmOffset() = "AlembicCameraSample_getHorizontalFilmOffset";
+function AlembicCameraSample.setHorizontalFilmOffset!(Float64 value) = "AlembicCameraSample_setHorizontalFilmOffset";
+function Float64 AlembicCameraSample.getVerticalAperture() = "AlembicCameraSample_getVerticalAperture";
+function AlembicCameraSample.setVerticalAperture!(Float64 value) = "AlembicCameraSample_setVerticalAperture";
+function Float64 AlembicCameraSample.getVerticalFilmOffset() = "AlembicCameraSample_getVerticalFilmOffset";
+function AlembicCameraSample.setVerticalFilmOffset!(Float64 value) = "AlembicCameraSample_setVerticalFilmOffset";
+function Float64 AlembicCameraSample.getLensSqueezeRatio() = "AlembicCameraSample_getLensSqueezeRatio";
+function AlembicCameraSample.setLensSqueezeRatio!(Float64 value) = "AlembicCameraSample_setLensSqueezeRatio";
+function Float64 AlembicCameraSample.getOverScanLeft() = "AlembicCameraSample_getOverScanLeft";
+function AlembicCameraSample.setOverScanLeft!(Float64 value) = "AlembicCameraSample_setOverScanLeft";
+function Float64 AlembicCameraSample.getOverScanRight() = "AlembicCameraSample_getOverScanRight";
+function AlembicCameraSample.setOverScanRight!(Float64 value) = "AlembicCameraSample_setOverScanRight";
+function Float64 AlembicCameraSample.getOverScanTop() = "AlembicCameraSample_getOverScanTop";
+function AlembicCameraSample.setOverScanTop!(Float64 value) = "AlembicCameraSample_setOverScanTop";
+function Float64 AlembicCameraSample.getOverScanBottom() = "AlembicCameraSample_getOverScanBottom";
+function AlembicCameraSample.setOverScanBottom!(Float64 value) = "AlembicCameraSample_setOverScanBottom";
+function Float64 AlembicCameraSample.getFStop() = "AlembicCameraSample_getFStop";
+function AlembicCameraSample.setFStop!(Float64 value) = "AlembicCameraSample_setFStop";
+function Float64 AlembicCameraSample.getFocusDistance() = "AlembicCameraSample_getFocusDistance";
+function AlembicCameraSample.setFocusDistance!(Float64 value) = "AlembicCameraSample_setFocusDistance";
+function Float64 AlembicCameraSample.getShutterOpen() = "AlembicCameraSample_getShutterOpen";
+function AlembicCameraSample.setShutterOpen!(Float64 value) = "AlembicCameraSample_setShutterOpen";
+function Float64 AlembicCameraSample.getShutterClose() = "AlembicCameraSample_getShutterClose";
+function AlembicCameraSample.setShutterClose!(Float64 value) = "AlembicCameraSample_setShutterClose";
+function Float64 AlembicCameraSample.getNearClippingPlane() = "AlembicCameraSample_getNearClippingPlane";
+function AlembicCameraSample.setNearClippingPlane!(Float64 value) = "AlembicCameraSample_setNearClippingPlane";
+function Float64 AlembicCameraSample.getFarClippingPlane() = "AlembicCameraSample_getFarClippingPlane";
+function AlembicCameraSample.setFarClippingPlane!(Float64 value) = "AlembicCameraSample_setFarClippingPlane";
+function Box3 AlembicCameraSample.getChildBounds() = "AlembicCameraSample_getChildBounds";
+function AlembicCameraSample.setChildBounds!(Box3 childBounds) = "AlembicCameraSample_setChildBounds";
+function Float64 AlembicCameraSample.getCoreValue(UInt32 index) = "AlembicCameraSample_getCoreValue";
+function Float64 AlembicCameraSample.getFieldOfView() = "AlembicCameraSample_getFieldOfView";
+function Mat33 AlembicCameraSample.getFilmBackMatrix() = "AlembicCameraSample_getFilmBackMatrix";

@@ -1,0 +1,45 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOArrayProperty {
+  Data handle;
+};
+
+function AlembicOArrayProperty() = "AlembicOArrayProperty_construct";
+function ~AlembicOArrayProperty() = "AlembicOArrayProperty_free";
+function Boolean AlembicOArrayProperty.valid() = "AlembicOArrayProperty_valid";
+function AlembicOArrayProperty.reset!() = "AlembicOArrayProperty_free";
+
+function AlembicPropertyHeader AlembicOArrayProperty.getHeader() = "AlembicOArrayProperty_getHeader";
+function String AlembicOArrayProperty.getName() = "AlembicOArrayProperty_getName";
+function AlembicPropertyType AlembicOArrayProperty.getPropertyType() = "AlembicOArrayProperty_getPropertyType";
+function Boolean AlembicOArrayProperty.isScalar() = "AlembicOArrayProperty_isScalar";
+function Boolean AlembicOArrayProperty.isArray() = "AlembicOArrayProperty_isArray";
+function Boolean AlembicOArrayProperty.isCompound() = "AlembicOArrayProperty_isCompound";
+function Boolean AlembicOArrayProperty.isSimple() = "AlembicOArrayProperty_isSimple";
+function AlembicMetaData AlembicOArrayProperty.getMetaData() = "AlembicOArrayProperty_getMetaData";
+function AlembicDataType AlembicOArrayProperty.getDataType() = "AlembicOArrayProperty_getDataType";
+function AlembicTimeSampling AlembicOArrayProperty.getTimeSampling() = "AlembicOArrayProperty_getTimeSampling";
+function AlembicOObject AlembicOArrayProperty.getObject() = "AlembicOArrayProperty_getObject";
+
+function AlembicOArrayProperty(AlembicOCompoundProperty parent, String name, AlembicDataType dataType) = "AlembicOArrayProperty_construct3Args";
+
+function UInt32 AlembicOArrayProperty.getNumSamples() = "AlembicOArrayProperty_getNumSamples";
+function AlembicOCompoundProperty AlembicOArrayProperty.getParent() = "AlembicOArrayProperty_getParent";
+function AlembicOArrayProperty.setTimeSampling!(UInt32 index) = "AlembicOArrayProperty_setTimeSampling";
+
+function AlembicOArrayProperty.setFromPrevious!() = "AlembicOArrayProperty_setFromPrevious";
+function AlembicOArrayProperty.setAsBoolean!(Boolean values<>) = "AlembicOArrayProperty_setAsBoolean";
+function AlembicOArrayProperty.setAsUInt8!(UInt8 values<>) = "AlembicOArrayProperty_setAsUInt8";
+function AlembicOArrayProperty.setAsSInt8!(SInt8 values<>) = "AlembicOArrayProperty_setAsSInt8";
+function AlembicOArrayProperty.setAsUInt16!(UInt16 values<>) = "AlembicOArrayProperty_setAsUInt16";
+function AlembicOArrayProperty.setAsSInt16!(SInt16 values<>) = "AlembicOArrayProperty_setAsSInt16";
+function AlembicOArrayProperty.setAsUInt32!(UInt32 values<>) = "AlembicOArrayProperty_setAsUInt32";
+function AlembicOArrayProperty.setAsSInt32!(SInt32 values<>) = "AlembicOArrayProperty_setAsSInt32";
+function AlembicOArrayProperty.setAsUInt64!(UInt64 values<>) = "AlembicOArrayProperty_setAsUInt64";
+function AlembicOArrayProperty.setAsSInt64!(SInt64 values<>) = "AlembicOArrayProperty_setAsSInt64";
+function AlembicOArrayProperty.setAsFloat16!(Float32 values<>) = "AlembicOArrayProperty_setAsFloat16";
+function AlembicOArrayProperty.setAsFloat32!(Float32 values<>) = "AlembicOArrayProperty_setAsFloat32";
+function AlembicOArrayProperty.setAsFloat64!(Float64 values<>) = "AlembicOArrayProperty_setAsFloat64";
+function AlembicOArrayProperty.setAsString!(String values<>) = "AlembicOArrayProperty_setAsString";

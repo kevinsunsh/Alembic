@@ -1,0 +1,30 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicICurvesSchema {
+  Data handle;
+};
+
+function AlembicICurvesSchema() = "AlembicICurvesSchema_construct";
+function ~AlembicICurvesSchema() = "AlembicICurvesSchema_free";
+function Boolean AlembicICurvesSchema.valid() = "AlembicICurvesSchema_valid";
+function AlembicICurvesSchema.reset!() = "AlembicICurvesSchema_free";
+
+function AlembicMeshTopologyVariance AlembicICurvesSchema.getTopologyVariance() = "AlembicICurvesSchema_getTopologyVariance";
+function Boolean AlembicICurvesSchema.isConstant() = "AlembicICurvesSchema_isConstant";
+function AlembicICurvesSchema.get?(io AlembicICurvesSample sample, AlembicISampleSelector ss) = "AlembicICurvesSchema_get";
+inline AlembicICurvesSchema.get?(io AlembicICurvesSample sample) { this.get(sample, AlembicISampleSelector(UInt32(0))); }
+function AlembicTimeSampling AlembicICurvesSchema.getTimeSampling() = "AlembicICurvesSchema_getTimeSampling";
+function UInt32 AlembicICurvesSchema.getNumSamples() = "AlembicICurvesSchema_getNumSamples";
+function AlembicICompoundProperty AlembicICurvesSchema.getArbGeomParams() = "AlembicICurvesSchema_getArbGeomParams";
+function AlembicICompoundProperty AlembicICurvesSchema.getUserProperties() = "AlembicICurvesSchema_getUserProperties";
+function AlembicIScalarProperty AlembicICurvesSchema.getChildBoundsProperty() = "AlembicICurvesSchema_getChildBoundsProperty";
+function AlembicIVec2VfGeomParam AlembicICurvesSchema.getUVsParam() = "AlembicICurvesSchema_getUVsParam";
+function AlembicIVec3NfGeomParam AlembicICurvesSchema.getNormalsParam() = "AlembicICurvesSchema_getNormalsParam";
+function AlembicIFloat32GeomParam AlembicICurvesSchema.getWidthsParam() = "AlembicICurvesSchema_getWidthsParam";
+function AlembicIArrayProperty AlembicICurvesSchema.getPositionsProperty() = "AlembicICurvesSchema_getPositionsProperty";
+function AlembicIArrayProperty AlembicICurvesSchema.getVelocitiesProperty() = "AlembicICurvesSchema_getVelocitiesProperty";
+function AlembicIArrayProperty AlembicICurvesSchema.getNumVerticesProperty() = "AlembicICurvesSchema_getNumVerticesProperty";
+function AlembicIArrayProperty AlembicICurvesSchema.getOrdersProperty() = "AlembicICurvesSchema_getOrdersProperty";
+function AlembicIArrayProperty AlembicICurvesSchema.getKnotsProperty() = "AlembicICurvesSchema_getKnotsProperty";

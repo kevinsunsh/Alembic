@@ -1,0 +1,19 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOLight {
+  Data handle;
+};
+
+function AlembicOLight() = "AlembicOLight_construct";
+function ~AlembicOLight() = "AlembicOLight_free";
+function Boolean AlembicOLight.valid() = "AlembicOLight_valid";
+function AlembicOLight.reset!() = "AlembicOLight_free";
+
+function AlembicOLight(AlembicOObject parent, String name, UInt32 timeSampling) = "AlembicOLight_construct3Args";
+function AlembicOObject(AlembicOLight light) = "AlembicOObject_constructFromOLight";
+inline AlembicOObject AlembicOLight.asOObject() { return AlembicOObject(this); }
+
+function Boolean AlembicOLight.matches(AlembicMetaData metaData) = "AlembicOLight_matches";
+function AlembicOLightSchema AlembicOLight.getSchema() = "AlembicOLight_getSchema";

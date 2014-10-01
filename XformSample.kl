@@ -1,0 +1,19 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+ require Math;
+
+object AlembicXformSample {
+  Data handle;
+};
+
+function AlembicXformSample() = "AlembicXformSample_construct";
+function ~AlembicXformSample() = "AlembicXformSample_free";
+
+function AlembicXformSample.setInheritsXforms!( Boolean inherits ) = "AlembicXformSample_setInheritsXforms";
+function Boolean AlembicXformSample.getInheritsXforms() = "AlembicXformSample_getInheritsXforms";
+function AlembicXformSample.setMatrix!(Mat44 matrix) = "AlembicXformSample_setMatrix";
+function Mat44 AlembicXformSample.getMatrix() = "AlembicXformSample_getMatrix";
+function Boolean AlembicXformSample.isTopologyEqual(AlembicXformSample otherSample) = "AlembicXformSample_isTopologyEqual";
+function Boolean AlembicXformSample.getIsTopologyFrozen() = "AlembicXformSample_getIsTopologyFrozen";

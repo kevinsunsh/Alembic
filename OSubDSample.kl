@@ -1,0 +1,46 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOSubDSample {
+  Data handle;
+};
+
+function AlembicOSubDSample() = "AlembicOSubDSample_construct";
+function ~AlembicOSubDSample() = "AlembicOSubDSample_free";
+
+function Vec3<> AlembicOSubDSample.getPositions() = "AlembicOSubDSample_getPositions";
+function AlembicOSubDSample.setPositions!(Vec3 values<>) = "AlembicOSubDSample_setPositions";
+function SInt32<> AlembicOSubDSample.getFaceIndices() = "AlembicOSubDSample_getFaceIndices";
+function AlembicOSubDSample.setFaceIndices!(SInt32 values<>) = "AlembicOSubDSample_setFaceIndices";
+function SInt32<> AlembicOSubDSample.getFaceCounts() = "AlembicOSubDSample_getFaceCounts";
+function AlembicOSubDSample.setFaceCounts!(SInt32 values<>) = "AlembicOSubDSample_setFaceCounts";
+function SInt32 AlembicOSubDSample.getFaceVaryingInterpolateBoundary() = "AlembicOSubDSample_getFaceVaryingInterpolateBoundary";
+function AlembicOSubDSample.setFaceVaryingInterpolateBoundary!( SInt32 i ) = "AlembicOSubDSample_setFaceVaryingInterpolateBoundary";
+function SInt32 AlembicOSubDSample.getFaceVaryingPropagateCorners() = "AlembicOSubDSample_getFaceVaryingPropagateCorners";
+function AlembicOSubDSample.setFaceVaryingPropagateCorners!( SInt32 i ) = "AlembicOSubDSample_setFaceVaryingPropagateCorners";
+function SInt32 AlembicOSubDSample.getInterpolateBoundary() = "AlembicOSubDSample_getInterpolateBoundary";
+function AlembicOSubDSample.setInterpolateBoundary!( SInt32 i ) = "AlembicOSubDSample_setInterpolateBoundary";
+function SInt32<> AlembicOSubDSample.getCreaseIndices() = "AlembicOSubDSample_getCreaseIndices";
+function AlembicOSubDSample.setCreaseIndices!(SInt32 values<>) = "AlembicOSubDSample_setCreaseIndices";
+function SInt32<> AlembicOSubDSample.getCreaseLengths() = "AlembicOSubDSample_getCreaseLengths";
+function AlembicOSubDSample.setCreaseLengths!(SInt32 values<>) = "AlembicOSubDSample_setCreaseLengths";
+function Float32<> AlembicOSubDSample.getCreaseSharpnesses() = "AlembicOSubDSample_getCreaseSharpnesses";
+function AlembicOSubDSample.setCreaseSharpnesses!(Float32 values<>) = "AlembicOSubDSample_setCreaseSharpnesses";
+function AlembicOSubDSample.setCreases!(SInt32 indices<>, SInt32 lengths<>) = "AlembicOSubDSample_setCreases2Args";
+function AlembicOSubDSample.setCreases!(SInt32 indices<>, SInt32 lengths<>, Float32 sharpnesses<>) = "AlembicOSubDSample_setCreases3Args";
+function SInt32<> AlembicOSubDSample.getCornerIndices() = "AlembicOSubDSample_getCornerIndices";
+function AlembicOSubDSample.setCornerIndices!(SInt32 values<>) = "AlembicOSubDSample_setCornerIndices";
+function Float32<> AlembicOSubDSample.getCornerSharpnesses() = "AlembicOSubDSample_getCornerSharpnesses";
+function AlembicOSubDSample.setCornerSharpnesses!(Float32 values<>) = "AlembicOSubDSample_setCornerSharpnesses";
+function AlembicOSubDSample.setCorners!(SInt32 indices<>, Float32 sharpnesses<>) = "AlembicOSubDSample_setCorners2Args";
+function SInt32<> AlembicOSubDSample.getHoles() = "AlembicOSubDSample_getHoles";
+function AlembicOSubDSample.setHoles!(SInt32 values<>) = "AlembicOSubDSample_setHoles";
+function String AlembicOSubDSample.getSubdivisionScheme() = "AlembicOSubDSample_getSubdivisionScheme";
+function AlembicOSubDSample.setSubdivisionScheme!(String value) = "AlembicOSubDSample_setSubdivisionScheme";
+function Box3 AlembicOSubDSample.getSelfBounds() = "AlembicOSubDSample_getSelfBounds";
+function AlembicOSubDSample.setSelfBounds!(Box3 bounds) = "AlembicOSubDSample_setSelfBounds";
+function Vec3<> AlembicOSubDSample.getVelocities() = "AlembicOSubDSample_getVelocities";
+function AlembicOSubDSample.setVelocities!(Vec3 values<>) = "AlembicOSubDSample_setVelocities";
+function AlembicOVec2VfGeomParamSample AlembicOSubDSample.getUVs() = "AlembicOSubDSample_getUVs";
+function AlembicOSubDSample.setUVs!(AlembicOVec2VfGeomParamSample values) = "AlembicOSubDSample_setUVs";

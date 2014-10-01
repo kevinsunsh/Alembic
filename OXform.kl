@@ -1,0 +1,19 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOXform {
+  Data handle;
+};
+
+function AlembicOXform() = "AlembicOXform_construct";
+function ~AlembicOXform() = "AlembicOXform_free";
+function Boolean AlembicOXform.valid() = "AlembicOXform_valid";
+function AlembicOXform.reset!() = "AlembicOXform_free";
+
+function AlembicOXform(AlembicOObject parent, String name, UInt32 timeSampling) = "AlembicOXform_construct3Args";
+function AlembicOObject(AlembicOXform xform) = "AlembicOObject_constructFromOXform";
+inline AlembicOObject AlembicOXform.asOObject() { return AlembicOObject(this); }
+
+function Boolean AlembicOXform.matches(AlembicMetaData metaData) = "AlembicOXform_matches";
+function AlembicOXformSchema AlembicOXform.getSchema() = "AlembicOXform_getSchema";

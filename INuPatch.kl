@@ -1,0 +1,20 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicINuPatch {
+  Data handle;
+};
+
+function AlembicINuPatch() = "AlembicINuPatch_construct";
+function ~AlembicINuPatch() = "AlembicINuPatch_free";
+function Boolean AlembicINuPatch.valid() = "AlembicINuPatch_valid";
+function AlembicINuPatch.reset!() = "AlembicINuPatch_free";
+
+function AlembicINuPatch(AlembicIObject obj) = "AlembicINuPatch_constructFromIObject";
+function AlembicIObject(AlembicINuPatch patch) = "AlembicIObject_constructFromINuPatch";
+inline AlembicIObject AlembicINuPatch.asIObject() { return AlembicIObject(this); }
+
+function Boolean AlembicINuPatch.matches(AlembicMetaData metaData) = "AlembicINuPatch_matches";
+function AlembicICompoundProperty AlembicINuPatch.getProperties() = "AlembicINuPatch_getProperties";
+function AlembicINuPatchSchema AlembicINuPatch.getSchema() = "AlembicINuPatch_getSchema";

@@ -1,0 +1,41 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicICurvesSample {
+  Data handle;
+};
+
+alias UInt32 AlembicCurvePeriodicity;
+const AlembicCurvePeriodicity Alembic_kNonPeriodic = 0;
+const AlembicCurvePeriodicity Alembic_kPeriodic = 1;
+
+alias UInt32 AlembicCurveType;
+const AlembicCurveType Alembic_kCubic = 0;
+const AlembicCurveType Alembic_kLinear = 1;
+const AlembicCurveType Alembic_kVariableOrder = 2;
+
+alias UInt32 AlembicBasisType;
+const AlembicBasisType Alembic_kNoBasis = 0;
+const AlembicBasisType Alembic_kBezierBasis = 1;
+const AlembicBasisType Alembic_kBsplineBasis = 2;
+const AlembicBasisType Alembic_kCatmullromBasis = 3;
+const AlembicBasisType Alembic_kHermiteBasis = 4;
+const AlembicBasisType Alembic_kPowerBasis = 5;
+
+function AlembicICurvesSample() = "AlembicICurvesSample_construct";
+function ~AlembicICurvesSample() = "AlembicICurvesSample_free";
+function Boolean AlembicICurvesSample.valid() = "AlembicICurvesSample_valid";
+function AlembicICurvesSample.reset!() = "AlembicICurvesSample_free";
+
+function Vec3<> AlembicICurvesSample.getPositions() = "AlembicICurvesSample_getPositions";
+function AlembicCurveType AlembicICurvesSample.getType() = "AlembicICurvesSample_getType";
+function AlembicCurvePeriodicity AlembicICurvesSample.getWrap() = "AlembicICurvesSample_getWrap";
+function UInt32 AlembicICurvesSample.getNumCurves() = "AlembicICurvesSample_getNumCurves";
+function SInt32<> AlembicICurvesSample.getCurvesNumVertices() = "AlembicICurvesSample_getCurvesNumVertices";
+function Box3 AlembicICurvesSample.getSelfBounds() = "AlembicICurvesSample_getSelfBounds";
+function Vec3<> AlembicICurvesSample.getVelocities() = "AlembicICurvesSample_getVelocities";
+function AlembicBasisType AlembicICurvesSample.getBasis() = "AlembicICurvesSample_getBasis";
+function Float32<> AlembicICurvesSample.getKnots() = "AlembicICurvesSample_getKnots";
+function UInt8<> AlembicICurvesSample.getOrders() = "AlembicICurvesSample_getOrders";
+

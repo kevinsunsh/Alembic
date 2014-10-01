@@ -1,0 +1,57 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIScalarProperty {
+  Data handle;
+};
+
+function AlembicIScalarProperty() = "AlembicIScalarProperty_construct";
+function ~AlembicIScalarProperty() = "AlembicIScalarProperty_free";
+function Boolean AlembicIScalarProperty.valid() = "AlembicIScalarProperty_valid";
+function AlembicIScalarProperty.reset!() = "AlembicIScalarProperty_free";
+
+function AlembicPropertyHeader AlembicIScalarProperty.getHeader() = "AlembicIScalarProperty_getHeader";
+function String AlembicIScalarProperty.getName() = "AlembicIScalarProperty_getName";
+function AlembicPropertyType AlembicIScalarProperty.getPropertyType() = "AlembicIScalarProperty_getPropertyType";
+function Boolean AlembicIScalarProperty.isScalar() = "AlembicIScalarProperty_isScalar";
+function Boolean AlembicIScalarProperty.isArray() = "AlembicIScalarProperty_isArray";
+function Boolean AlembicIScalarProperty.isCompound() = "AlembicIScalarProperty_isCompound";
+function Boolean AlembicIScalarProperty.isSimple() = "AlembicIScalarProperty_isSimple";
+function AlembicMetaData AlembicIScalarProperty.getMetaData() = "AlembicIScalarProperty_getMetaData";
+function AlembicDataType AlembicIScalarProperty.getDataType() = "AlembicIScalarProperty_getDataType";
+function AlembicTimeSampling AlembicIScalarProperty.getTimeSampling() = "AlembicIScalarProperty_getTimeSampling";
+function AlembicIObject AlembicIScalarProperty.getObject() = "AlembicIScalarProperty_getObject";
+
+function AlembicIScalarProperty(AlembicICompoundProperty parent, String name) = "AlembicIScalarProperty_construct2Args";
+
+function UInt32 AlembicIScalarProperty.getNumSamples() = "AlembicIScalarProperty_getNumSamples";
+function Boolean AlembicIScalarProperty.isConstant() = "AlembicIScalarProperty_isConstant";
+function AlembicICompoundProperty AlembicIScalarProperty.getParent() = "AlembicIScalarProperty_getParent";
+
+function Boolean[] AlembicIScalarProperty.getAsBoolean() = "AlembicIScalarProperty_getAsBoolean";
+function Boolean[] AlembicIScalarProperty.getAsBoolean(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsBooleanWithISS";
+function UInt8[] AlembicIScalarProperty.getAsUInt8() = "AlembicIScalarProperty_getAsUInt8";
+function UInt8[] AlembicIScalarProperty.getAsUInt8(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsUInt8WithISS";
+function SInt8[] AlembicIScalarProperty.getAsSInt8() = "AlembicIScalarProperty_getAsSInt8";
+function SInt8[] AlembicIScalarProperty.getAsSInt8(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsSInt8WithISS";
+function UInt16[] AlembicIScalarProperty.getAsUInt16() = "AlembicIScalarProperty_getAsUInt16";
+function UInt16[] AlembicIScalarProperty.getAsUInt16(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsUInt16WithISS";
+function SInt16[] AlembicIScalarProperty.getAsSInt16() = "AlembicIScalarProperty_getAsSInt16";
+function SInt16[] AlembicIScalarProperty.getAsSInt16(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsSInt16WithISS";
+function UInt32[] AlembicIScalarProperty.getAsUInt32() = "AlembicIScalarProperty_getAsUInt32";
+function UInt32[] AlembicIScalarProperty.getAsUInt32(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsUInt32WithISS";
+function SInt32[] AlembicIScalarProperty.getAsSInt32() = "AlembicIScalarProperty_getAsSInt32";
+function SInt32[] AlembicIScalarProperty.getAsSInt32(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsSInt32WithISS";
+function UInt64[] AlembicIScalarProperty.getAsUInt64() = "AlembicIScalarProperty_getAsUInt64";
+function UInt64[] AlembicIScalarProperty.getAsUInt64(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsUInt64WithISS";
+function SInt64[] AlembicIScalarProperty.getAsSInt64() = "AlembicIScalarProperty_getAsSInt64";
+function SInt64[] AlembicIScalarProperty.getAsSInt64(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsSInt64WithISS";
+function Float32[] AlembicIScalarProperty.getAsFloat16() = "AlembicIScalarProperty_getAsFloat16";
+function Float32[] AlembicIScalarProperty.getAsFloat16(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsFloat16WithISS";
+function Float32[] AlembicIScalarProperty.getAsFloat32() = "AlembicIScalarProperty_getAsFloat32";
+function Float32[] AlembicIScalarProperty.getAsFloat32(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsFloat32WithISS";
+function Float64[] AlembicIScalarProperty.getAsFloat64() = "AlembicIScalarProperty_getAsFloat64";
+function Float64[] AlembicIScalarProperty.getAsFloat64(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsFloat64WithISS";
+function String[] AlembicIScalarProperty.getAsString() = "AlembicIScalarProperty_getAsString";
+function String[] AlembicIScalarProperty.getAsString(AlembicISampleSelector iSS) = "AlembicIScalarProperty_getAsStringWithISS";

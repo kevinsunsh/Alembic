@@ -1,0 +1,26 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOPolyMeshSchema {
+  Data handle;
+};
+
+function AlembicOPolyMeshSchema() = "AlembicOPolyMeshSchema_construct";
+function ~AlembicOPolyMeshSchema() = "AlembicOPolyMeshSchema_free";
+function Boolean AlembicOPolyMeshSchema.valid() = "AlembicOPolyMeshSchema_valid";
+function AlembicOPolyMeshSchema.reset!() = "AlembicOPolyMeshSchema_free";
+
+function AlembicTimeSampling AlembicOPolyMeshSchema.getTimeSampling() = "AlembicOPolyMeshSchema_getTimeSampling";
+function UInt32 AlembicOPolyMeshSchema.getNumSamples() = "AlembicOPolyMeshSchema_getNumSamples";
+function AlembicOPolyMeshSchema.set!(AlembicOPolyMeshSample sample) = "AlembicOPolyMeshSchema_set";
+function AlembicOPolyMeshSchema.setFromPrevious!() = "AlembicOPolyMeshSchema_setFromPrevious";
+function AlembicOPolyMeshSchema.setTimeSampling!(UInt32 index) = "AlembicOPolyMeshSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicOPolyMeshSchema.getArbGeomParams() = "AlembicOPolyMeshSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOPolyMeshSchema.getUserProperties() = "AlembicOPolyMeshSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOPolyMeshSchema.getChildBoundsProperty() = "AlembicOPolyMeshSchema_getChildBoundsProperty";
+function AlembicOFaceSet AlembicOPolyMeshSchema.createFaceSet(String name) = "AlembicOPolyMeshSchema_createFaceSet";
+function String[] AlembicOPolyMeshSchema.getFaceSetNames() = "AlembicOPolyMeshSchema_getFaceSetNames";
+function AlembicOFaceSet AlembicOPolyMeshSchema.getFaceSet(String name) = "AlembicOPolyMeshSchema_getFaceSet";
+function Boolean AlembicOPolyMeshSchema.hasFaceSet(String name) = "AlembicOPolyMeshSchema_hasFaceSet";
+function AlembicOPolyMeshSchema.setUVSourceName!(String name) = "AlembicOPolyMeshSchema_setUVSourceName";

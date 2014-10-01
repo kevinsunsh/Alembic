@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOCurvesSchema {
+  Data handle;
+};
+
+function AlembicOCurvesSchema() = "AlembicOCurvesSchema_construct";
+function ~AlembicOCurvesSchema() = "AlembicOCurvesSchema_free";
+function Boolean AlembicOCurvesSchema.valid() = "AlembicOCurvesSchema_valid";
+function AlembicOCurvesSchema.reset!() = "AlembicOCurvesSchema_free";
+
+function AlembicTimeSampling AlembicOCurvesSchema.getTimeSampling() = "AlembicOCurvesSchema_getTimeSampling";
+function UInt32 AlembicOCurvesSchema.getNumSamples() = "AlembicOCurvesSchema_getNumSamples";
+function AlembicOCurvesSchema.set!(AlembicOCurvesSample sample) = "AlembicOCurvesSchema_set";
+function AlembicOCurvesSchema.setFromPrevious!() = "AlembicOCurvesSchema_setFromPrevious";
+function AlembicOCurvesSchema.setTimeSampling!(UInt32 index) = "AlembicOCurvesSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicOCurvesSchema.getArbGeomParams() = "AlembicOCurvesSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOCurvesSchema.getUserProperties() = "AlembicOCurvesSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOCurvesSchema.getChildBoundsProperty() = "AlembicOCurvesSchema_getChildBoundsProperty";

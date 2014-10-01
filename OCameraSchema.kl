@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOCameraSchema {
+  Data handle;
+};
+
+function AlembicOCameraSchema() = "AlembicOCameraSchema_construct";
+function ~AlembicOCameraSchema() = "AlembicOCameraSchema_free";
+function Boolean AlembicOCameraSchema.valid() = "AlembicOCameraSchema_valid";
+function AlembicOCameraSchema.reset!() = "AlembicOCameraSchema_free";
+
+function AlembicTimeSampling AlembicOCameraSchema.getTimeSampling() = "AlembicOCameraSchema_getTimeSampling";
+function UInt32 AlembicOCameraSchema.getNumSamples() = "AlembicOCameraSchema_getNumSamples";
+function AlembicOCameraSchema.set!(AlembicCameraSample sample) = "AlembicOCameraSchema_set";
+function AlembicOCameraSchema.setFromPrevious!() = "AlembicOCameraSchema_setFromPrevious";
+function AlembicOCameraSchema.setTimeSampling!(UInt32 index) = "AlembicOCameraSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicOCameraSchema.getArbGeomParams() = "AlembicOCameraSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOCameraSchema.getUserProperties() = "AlembicOCameraSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOCameraSchema.getChildBoundsProperty() = "AlembicOCameraSchema_getChildBoundsProperty";

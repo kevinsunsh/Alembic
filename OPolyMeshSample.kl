@@ -1,0 +1,25 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOPolyMeshSample {
+  Data handle;
+};
+
+function AlembicOPolyMeshSample() = "AlembicOPolyMeshSample_construct";
+function ~AlembicOPolyMeshSample() = "AlembicOPolyMeshSample_free";
+
+function Vec3<> AlembicOPolyMeshSample.getPositions() = "AlembicOPolyMeshSample_getPositions";
+function AlembicOPolyMeshSample.setPositions!(Vec3 values<>) = "AlembicOPolyMeshSample_setPositions";
+function Vec3<> AlembicOPolyMeshSample.getVelocities() = "AlembicOPolyMeshSample_getVelocities";
+function AlembicOPolyMeshSample.setVelocities!(Vec3 values<>) = "AlembicOPolyMeshSample_setVelocities";
+function Box3 AlembicOPolyMeshSample.getSelfBounds() = "AlembicOPolyMeshSample_getSelfBounds";
+function AlembicOPolyMeshSample.setSelfBounds!(Box3 bounds) = "AlembicOPolyMeshSample_setSelfBounds";
+function SInt32<> AlembicOPolyMeshSample.getFaceIndices() = "AlembicOPolyMeshSample_getFaceIndices";
+function AlembicOPolyMeshSample.setFaceIndices!(SInt32 values<>) = "AlembicOPolyMeshSample_setFaceIndices";
+function SInt32<> AlembicOPolyMeshSample.getFaceCounts() = "AlembicOPolyMeshSample_getFaceCounts";
+function AlembicOPolyMeshSample.setFaceCounts!(SInt32 values<>) = "AlembicOPolyMeshSample_setFaceCounts";
+function AlembicOVec2VfGeomParamSample AlembicOPolyMeshSample.getUVs() = "AlembicOPolyMeshSample_getUVs";
+function AlembicOPolyMeshSample.setUVs!(AlembicOVec2VfGeomParamSample values) = "AlembicOPolyMeshSample_setUVs";
+function AlembicOVec3NfGeomParamSample AlembicOPolyMeshSample.getNormals() = "AlembicOPolyMeshSample_getNormals";
+function AlembicOPolyMeshSample.setNormals!(AlembicOVec3NfGeomParamSample values) = "AlembicOPolyMeshSample_setNormals";

@@ -1,0 +1,43 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicDataType {
+  Data handle;
+};
+
+alias UInt32 AlembicPOD;
+const AlembicPOD Alembic_kBooleanPOD = 0;
+const AlembicPOD Alembic_kUint8POD = 1;
+const AlembicPOD Alembic_kInt8POD = 2;
+const AlembicPOD Alembic_kUint16POD = 3;
+const AlembicPOD Alembic_kInt16POD = 4;
+const AlembicPOD Alembic_kUint32POD = 5;
+const AlembicPOD Alembic_kInt32POD = 6;
+const AlembicPOD Alembic_kUint64POD = 7;
+const AlembicPOD Alembic_kInt64POD = 8;
+const AlembicPOD Alembic_kFloat16POD = 9;
+const AlembicPOD Alembic_kFloat32POD = 10;
+const AlembicPOD Alembic_kFloat64POD = 11;
+const AlembicPOD Alembic_kStringPOD = 12;
+const AlembicPOD Alembic_kWstringPOD = 13;
+const AlembicPOD Alembic_kNumPlainOldDataTypes = 14;
+const AlembicPOD Alembic_kUnknownPOD = 127;
+
+function AlembicDataType() = "AlembicDataType_construct";
+function ~AlembicDataType() = "AlembicDataType_free";
+
+function AlembicDataType(AlembicPOD pod, UInt32 extent) = "AlembicDataType_construct2Args";
+inline AlembicDataType(AlembicPOD pod) {
+  this = AlembicDataType(pod, 1);
+}
+
+function AlembicPOD AlembicDataType.getPod() = "AlembicDataType_getPod";
+function String AlembicDataType.getPodName() = "AlembicDataType_getPodName";
+function AlembicDataType.setPod!(AlembicPOD pod) = "AlembicDataType_setPod";
+function UInt32 AlembicDataType.getExtent() = "AlembicDataType_getExtent";
+function AlembicDataType.setExtent!(UInt32 extent) = "AlembicDataType_setExtent";
+function UInt32 AlembicDataType.getNumBytes() = "AlembicDataType_getNumBytes";
+
+function Boolean == (AlembicDataType a, AlembicDataType b) = "AlembicDataType_operatorEquals";
+function Boolean < (AlembicDataType a, AlembicDataType b) = "AlembicDataType_operatorLess";

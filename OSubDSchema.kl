@@ -1,0 +1,26 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOSubDSchema {
+  Data handle;
+};
+
+function AlembicOSubDSchema() = "AlembicOSubDSchema_construct";
+function ~AlembicOSubDSchema() = "AlembicOSubDSchema_free";
+function Boolean AlembicOSubDSchema.valid() = "AlembicOSubDSchema_valid";
+function AlembicOSubDSchema.reset!() = "AlembicOSubDSchema_free";
+
+function AlembicTimeSampling AlembicOSubDSchema.getTimeSampling() = "AlembicOSubDSchema_getTimeSampling";
+function UInt32 AlembicOSubDSchema.getNumSamples() = "AlembicOSubDSchema_getNumSamples";
+function AlembicOSubDSchema.set!(AlembicOSubDSample sample) = "AlembicOSubDSchema_set";
+function AlembicOSubDSchema.setFromPrevious!() = "AlembicOSubDSchema_setFromPrevious";
+function AlembicOSubDSchema.setTimeSampling!(UInt32 index) = "AlembicOSubDSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicOSubDSchema.getArbGeomParams() = "AlembicOSubDSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOSubDSchema.getUserProperties() = "AlembicOSubDSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOSubDSchema.getChildBoundsProperty() = "AlembicOSubDSchema_getChildBoundsProperty";
+function AlembicOFaceSet AlembicOSubDSchema.createFaceSet(String name) = "AlembicOSubDSchema_createFaceSet";
+function String[] AlembicOSubDSchema.getFaceSetNames() = "AlembicOSubDSchema_getFaceSetNames";
+function AlembicOFaceSet AlembicOSubDSchema.getFaceSet(String name) = "AlembicOSubDSchema_getFaceSet";
+function Boolean AlembicOSubDSchema.hasFaceSet(String name) = "AlembicOSubDSchema_hasFaceSet";
+function AlembicOSubDSchema.setUVSourceName!(String name) = "AlembicOSubDSchema_setUVSourceName";

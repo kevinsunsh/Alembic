@@ -1,0 +1,32 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOCompoundProperty {
+  Data handle;
+};
+
+function AlembicOCompoundProperty() = "AlembicOCompoundProperty_construct";
+function ~AlembicOCompoundProperty() = "AlembicOCompoundProperty_free";
+function Boolean AlembicOCompoundProperty.valid() = "AlembicOCompoundProperty_valid";
+function AlembicOCompoundProperty.reset!() = "AlembicOCompoundProperty_free";
+
+function AlembicOCompoundProperty(AlembicOCompoundProperty parent, String name) = "AlembicOCompoundProperty_construct2Args";
+
+function AlembicPropertyHeader AlembicOCompoundProperty.getHeader() = "AlembicOCompoundProperty_getHeader";
+function String AlembicOCompoundProperty.getName() = "AlembicOCompoundProperty_getName";
+function AlembicPropertyType AlembicOCompoundProperty.getPropertyType() = "AlembicOCompoundProperty_getPropertyType";
+function Boolean AlembicOCompoundProperty.isScalar() = "AlembicOCompoundProperty_isScalar";
+function Boolean AlembicOCompoundProperty.isArray() = "AlembicOCompoundProperty_isArray";
+function Boolean AlembicOCompoundProperty.isCompound() = "AlembicOCompoundProperty_isCompound";
+function Boolean AlembicOCompoundProperty.isSimple() = "AlembicOCompoundProperty_isSimple";
+function AlembicMetaData AlembicOCompoundProperty.getMetaData() = "AlembicOCompoundProperty_getMetaData";
+function AlembicDataType AlembicOCompoundProperty.getDataType() = "AlembicOCompoundProperty_getDataType";
+function AlembicTimeSampling AlembicOCompoundProperty.getTimeSampling() = "AlembicOCompoundProperty_getTimeSampling";
+function AlembicOObject AlembicOCompoundProperty.getObject() = "AlembicOCompoundProperty_getObject";
+
+function UInt32 AlembicOCompoundProperty.getNumProperties() = "AlembicOCompoundProperty_getNumProperties";
+function AlembicPropertyHeader AlembicOCompoundProperty.getPropertyHeader( UInt32 propertyIndex ) = "AlembicOCompoundProperty_getPropertyHeader";
+function AlembicPropertyHeader AlembicOCompoundProperty.getPropertyHeader( String propertyName ) = "AlembicOCompoundProperty_getPropertyHeaderByName";
+function AlembicOCompoundProperty AlembicOCompoundProperty.getParent() = "AlembicOCompoundProperty_getParent";
+

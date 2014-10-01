@@ -1,0 +1,25 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIPointsSchema {
+  Data handle;
+};
+
+function AlembicIPointsSchema() = "AlembicIPointsSchema_construct";
+function ~AlembicIPointsSchema() = "AlembicIPointsSchema_free";
+function Boolean AlembicIPointsSchema.valid() = "AlembicIPointsSchema_valid";
+function AlembicIPointsSchema.reset!() = "AlembicIPointsSchema_free";
+
+function Boolean AlembicIPointsSchema.isConstant() = "AlembicIPointsSchema_isConstant";
+function AlembicIPointsSchema.get?(io AlembicIPointsSample sample, AlembicISampleSelector ss) = "AlembicIPointsSchema_get";
+inline AlembicIPointsSchema.get?(io AlembicIPointsSample sample) { this.get(sample, AlembicISampleSelector(UInt32(0))); }
+function AlembicTimeSampling AlembicIPointsSchema.getTimeSampling() = "AlembicIPointsSchema_getTimeSampling";
+function UInt32 AlembicIPointsSchema.getNumSamples() = "AlembicIPointsSchema_getNumSamples";
+function AlembicICompoundProperty AlembicIPointsSchema.getArbGeomParams() = "AlembicIPointsSchema_getArbGeomParams";
+function AlembicICompoundProperty AlembicIPointsSchema.getUserProperties() = "AlembicIPointsSchema_getUserProperties";
+function AlembicIScalarProperty AlembicIPointsSchema.getChildBoundsProperty() = "AlembicIPointsSchema_getChildBoundsProperty";
+function AlembicIArrayProperty AlembicIPointsSchema.getPositionsProperty() = "AlembicIPointsSchema_getPositionsProperty";
+function AlembicIArrayProperty AlembicIPointsSchema.getVelocitiesProperty() = "AlembicIPointsSchema_getVelocitiesProperty";
+function AlembicIArrayProperty AlembicIPointsSchema.getIdsProperty() = "AlembicIPointsSchema_getIdsProperty";
+function AlembicIFloat32GeomParam AlembicIPointsSchema.getWidthsParam() = "AlembicIPointsSchema_getWidthsParam";

@@ -1,0 +1,28 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicISubDSample {
+  Data handle;
+};
+
+function AlembicISubDSample() = "AlembicISubDSample_construct";
+function ~AlembicISubDSample() = "AlembicISubDSample_free";
+function Boolean AlembicISubDSample.valid() = "AlembicISubDSample_valid";
+function AlembicISubDSample.reset!() = "AlembicISubDSample_free";
+
+function Vec3<> AlembicISubDSample.getPositions() = "AlembicISubDSample_getPositions";
+function SInt32<> AlembicISubDSample.getFaceIndices() = "AlembicISubDSample_getFaceIndices";
+function SInt32<> AlembicISubDSample.getFaceCounts() = "AlembicISubDSample_getFaceCounts";
+function SInt32 AlembicISubDSample.getFaceVaryingInterpolateBoundary() = "AlembicISubDSample_getFaceVaryingInterpolateBoundary";
+function SInt32 AlembicISubDSample.getFaceVaryingPropagateCorners() = "AlembicISubDSample_getFaceVaryingPropagateCorners";
+function SInt32 AlembicISubDSample.getInterpolateBoundary() = "AlembicISubDSample_getInterpolateBoundary";
+function SInt32<> AlembicISubDSample.getCreaseIndices() = "AlembicISubDSample_getCreaseIndices";
+function SInt32<> AlembicISubDSample.getCreaseLengths() = "AlembicISubDSample_getCreaseLengths";
+function Float32<> AlembicISubDSample.getCreaseSharpnesses() = "AlembicISubDSample_getCreaseSharpnesses";
+function SInt32<> AlembicISubDSample.getCornerIndices() = "AlembicISubDSample_getCornerIndices";
+function Float32<> AlembicISubDSample.getCornerSharpnesses() = "AlembicISubDSample_getCornerSharpnesses";
+function SInt32<> AlembicISubDSample.getHoles() = "AlembicISubDSample_getHoles";
+function String AlembicISubDSample.getSubdivisionScheme() = "AlembicISubDSample_getSubdivisionScheme";
+function Box3 AlembicISubDSample.getSelfBounds() = "AlembicISubDSample_getSelfBounds";
+function Vec3<> AlembicISubDSample.getVelocities() = "AlembicISubDSample_getVelocities";

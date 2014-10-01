@@ -1,0 +1,28 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIObject {
+  Data handle;
+};
+
+function AlembicIObject() = "AlembicIObject_construct";
+function ~AlembicIObject() = "AlembicIObject_free";
+function Boolean AlembicIObject.valid() = "AlembicIObject_valid";
+function AlembicIObject.reset!() = "AlembicIObject_free";
+
+function String AlembicIObject.getName() = "AlembicIObject_getName";
+function String AlembicIObject.getFullName() = "AlembicIObject_getFullName";
+function AlembicMetaData AlembicIObject.getMetaData() = "AlembicIObject_getMetaData";
+function AlembicIArchive AlembicIObject.getArchive() = "AlembicIObject_getArchive";
+function AlembicIObject AlembicIObject.getParent() = "AlembicIObject_getParent";
+function UInt32 AlembicIObject.getNumChildren() = "AlembicIObject_getNumChildren";
+function AlembicICompoundProperty AlembicIObject.getProperties() = "AlembicIObject_getProperties";
+function AlembicIObject AlembicIObject.getChild(UInt32 childIndex ) = "AlembicIObject_getChild";
+function AlembicIObject AlembicIObject.getChild(String childName ) = "AlembicIObject_getChild_byName";
+function Boolean AlembicIObject.isInstanceRoot() = "AlembicIObject_isInstanceRoot";
+function Boolean AlembicIObject.isInstanceDescendant() = "AlembicIObject_isInstanceDescendant";
+function String AlembicIObject.instanceSourcePath() = "AlembicIObject_instanceSourcePath";
+function Boolean AlembicIObject.isChildInstance(UInt32 childIndex) = "AlembicIObject_isChildInstance";
+function Boolean AlembicIObject.isChildInstance(String childName) = "AlembicIObject_isChildInstance_byName";
+

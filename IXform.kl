@@ -1,0 +1,20 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIXform {
+  Data handle;
+};
+
+function AlembicIXform() = "AlembicIXform_construct";
+function ~AlembicIXform() = "AlembicIXform_free";
+function Boolean AlembicIXform.valid() = "AlembicIXform_valid";
+function AlembicIXform.reset!() = "AlembicIXform_free";
+
+function AlembicIXform(AlembicIObject obj) = "AlembicIXform_constructFromIObject";
+function AlembicIObject(AlembicIXform xform) = "AlembicIObject_constructFromIXform";
+inline AlembicIObject AlembicIXform.asIObject() { return AlembicIObject(this); }
+
+function Boolean AlembicIXform.matches(AlembicMetaData metaData) = "AlembicIXform_matches";
+function AlembicICompoundProperty AlembicIXform.getProperties() = "AlembicIXform_getProperties";
+function AlembicIXformSchema AlembicIXform.getSchema() = "AlembicIXform_getSchema";

@@ -1,0 +1,20 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOCurves {
+  Data handle;
+};
+
+function AlembicOCurves() = "AlembicOCurves_construct";
+function ~AlembicOCurves() = "AlembicOCurves_free";
+function Boolean AlembicOCurves.valid() = "AlembicOCurves_valid";
+function AlembicOCurves.reset!() = "AlembicOCurves_free";
+
+function AlembicOCurves(AlembicOObject parent, String name, UInt32 timeSampling) = "AlembicOCurves_construct3Args";
+function AlembicOObject(AlembicOCurves curves) = "AlembicOObject_constructFromOCurves";
+
+inline AlembicOObject AlembicOCurves.asOObject() { return AlembicOObject(this); }
+
+function Boolean AlembicOCurves.matches(AlembicMetaData metaData) = "AlembicOCurves_matches";
+function AlembicOCurvesSchema AlembicOCurves.getSchema() = "AlembicOCurves_getSchema";

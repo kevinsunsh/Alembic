@@ -1,0 +1,33 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicPropertyHeader {
+  Data handle;
+};
+
+alias UInt32 AlembicPropertyType;
+const AlembicPropertyType Alembic_kCompoundProperty = 0;
+const AlembicPropertyType Alembic_kScalarProperty = 1;
+const AlembicPropertyType Alembic_kArrayProperty = 2;
+
+function AlembicPropertyHeader() = "AlembicPropertyHeader_construct";
+function ~AlembicPropertyHeader() = "AlembicPropertyHeader_free";
+
+function AlembicPropertyHeader(String name, AlembicMetaData metaData) = "AlembicPropertyHeader_construct2Args";
+function AlembicPropertyHeader(String name, AlembicPropertyType propType, AlembicMetaData metaData, AlembicDataType dataType, AlembicTimeSampling timeSampling) = "AlembicPropertyHeader_construct5Args";
+
+function String AlembicPropertyHeader.getName() = "AlembicPropertyHeader_getName";
+function AlembicPropertyHeader.setName!(String name) = "AlembicPropertyHeader_setName";
+function AlembicPropertyType AlembicPropertyHeader.getPropertyType() = "AlembicPropertyHeader_getPropertyType";
+function AlembicPropertyHeader.setPropertyType!(AlembicPropertyType propType) = "AlembicPropertyHeader_setPropertyType";
+function Boolean AlembicPropertyHeader.isScalar() = "AlembicPropertyHeader_isScalar";
+function Boolean AlembicPropertyHeader.isArray() = "AlembicPropertyHeader_isArray";
+function Boolean AlembicPropertyHeader.isCompound() = "AlembicPropertyHeader_isCompound";
+function Boolean AlembicPropertyHeader.isSimple() = "AlembicPropertyHeader_isSimple";
+function AlembicMetaData AlembicPropertyHeader.getMetaData() = "AlembicPropertyHeader_getMetaData";
+function AlembicPropertyHeader.setMetaData!(AlembicMetaData metaData) = "AlembicPropertyHeader_setMetaData";
+function AlembicDataType AlembicPropertyHeader.getDataType() = "AlembicPropertyHeader_getDataType";
+function AlembicPropertyHeader.setDataType!(AlembicDataType dataType) = "AlembicPropertyHeader_setDataType";
+function AlembicTimeSampling AlembicPropertyHeader.getTimeSampling() = "AlembicPropertyHeader_getTimeSampling";
+function AlembicPropertyHeader.setTimeSampling!(AlembicTimeSampling timeSampling) = "AlembicPropertyHeader_setTimeSampling";

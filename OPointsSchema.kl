@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOPointsSchema {
+  Data handle;
+};
+
+function AlembicOPointsSchema() = "AlembicOPointsSchema_construct";
+function ~AlembicOPointsSchema() = "AlembicOPointsSchema_free";
+function Boolean AlembicOPointsSchema.valid() = "AlembicOPointsSchema_valid";
+function AlembicOPointsSchema.reset!() = "AlembicOPointsSchema_free";
+
+function AlembicTimeSampling AlembicOPointsSchema.getTimeSampling() = "AlembicOPointsSchema_getTimeSampling";
+function UInt32 AlembicOPointsSchema.getNumSamples() = "AlembicOPointsSchema_getNumSamples";
+function AlembicOPointsSchema.set!(AlembicOPointsSample sample) = "AlembicOPointsSchema_set";
+function AlembicOPointsSchema.setFromPrevious!() = "AlembicOPointsSchema_setFromPrevious";
+function AlembicOPointsSchema.setTimeSampling!(UInt32 index) = "AlembicOPointsSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicOPointsSchema.getArbGeomParams() = "AlembicOPointsSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOPointsSchema.getUserProperties() = "AlembicOPointsSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOPointsSchema.getChildBoundsProperty() = "AlembicOPointsSchema_getChildBoundsProperty";

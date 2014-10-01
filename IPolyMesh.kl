@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIPolyMesh {
+  Data handle;
+};
+
+function AlembicIPolyMesh() = "AlembicIPolyMesh_construct";
+function ~AlembicIPolyMesh() = "AlembicIPolyMesh_free";
+function Boolean AlembicIPolyMesh.valid() = "AlembicIPolyMesh_valid";
+function AlembicIPolyMesh.reset!() = "AlembicIPolyMesh_free";
+
+function AlembicIPolyMesh(AlembicIObject obj) = "AlembicIPolyMesh_constructFromIObject";
+function AlembicIObject(AlembicIPolyMesh polyMesh) = "AlembicIObject_constructFromIPolyMesh";
+
+inline AlembicIObject AlembicIPolyMesh.asIObject() { return AlembicIObject(this); }
+
+function Boolean AlembicIPolyMesh.matches(AlembicMetaData metaData) = "AlembicIPolyMesh_matches";
+function AlembicICompoundProperty AlembicIPolyMesh.getProperties() = "AlembicIPolyMesh_getProperties";
+function AlembicIPolyMeshSchema AlembicIPolyMesh.getSchema() = "AlembicIPolyMesh_getSchema";

@@ -1,0 +1,20 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIPoints {
+  Data handle;
+};
+
+function AlembicIPoints() = "AlembicIPoints_construct";
+function ~AlembicIPoints() = "AlembicIPoints_free";
+function Boolean AlembicIPoints.valid() = "AlembicIPoints_valid";
+function AlembicIPoints.reset!() = "AlembicIPoints_free";
+
+function AlembicIPoints(AlembicIObject obj) = "AlembicIPoints_constructFromIObject";
+function AlembicIObject(AlembicIPoints points) = "AlembicIObject_constructFromIPoints";
+inline AlembicIObject AlembicIPoints.asIObject() { return AlembicIObject(this); }
+
+function Boolean AlembicIPoints.matches(AlembicMetaData metaData) = "AlembicIPoints_matches";
+function AlembicIPointsSchema AlembicIPoints.getSchema() = "AlembicIPoints_getSchema";
+function AlembicICompoundProperty AlembicIPoints.getProperties() = "AlembicIPoints_getProperties";

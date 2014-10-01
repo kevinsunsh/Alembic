@@ -1,0 +1,25 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOArchive {
+  Data handle;
+};
+
+function AlembicOArchive() = "AlembicOArchive_construct";
+function ~AlembicOArchive() = "AlembicOArchive_free";
+function Boolean AlembicOArchive.valid() = "AlembicOArchive_valid";
+function AlembicOArchive.reset!() = "AlembicOArchive_free";
+
+function AlembicOArchive(in String coreType, in String fileName) = "AlembicOArchive_constructFrom2Args";
+inline AlembicOArchive(in String fileName) {
+  this = AlembicOArchive('Ogawa', fileName);
+}
+
+function String AlembicOArchive.getName() = "AlembicOArchive_getName";
+function AlembicOObject AlembicOArchive.getTop() = "AlembicOArchive_getTop";
+function UInt32 AlembicOArchive.addTimeSampling!(AlembicTimeSampling timeSampling) = "AlembicOArchive_addTimeSampling";
+function UInt32 AlembicOArchive.getNumTimeSamplings() = "AlembicOArchive_getNumTimeSamplings";
+function AlembicTimeSampling AlembicOArchive.getTimeSampling(UInt32 index) = "AlembicOArchive_getTimeSampling";
+function UInt32 AlembicOArchive.getCompressionHint() = "AlembicOArchive_getCompressionHint";
+function AlembicOArchive.setCompressionHint!(UInt32 hint) = "AlembicOArchive_setCompressionHint";

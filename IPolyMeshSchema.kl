@@ -1,0 +1,36 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIPolyMeshSchema {
+  Data handle;
+};
+
+alias UInt32 AlembicMeshTopologyVariance;
+const AlembicMeshTopologyVariance Alembic_kConstantTopology = 0;
+const AlembicMeshTopologyVariance Alembic_kHomogenousTopology = 1;
+const AlembicMeshTopologyVariance Alembic_kHeterogenousTopology = 2;
+
+function AlembicIPolyMeshSchema() = "AlembicIPolyMeshSchema_construct";
+function ~AlembicIPolyMeshSchema() = "AlembicIPolyMeshSchema_free";
+function Boolean AlembicIPolyMeshSchema.valid() = "AlembicIPolyMeshSchema_valid";
+function AlembicIPolyMeshSchema.reset!() = "AlembicIPolyMeshSchema_free";
+
+function AlembicMeshTopologyVariance AlembicIPolyMeshSchema.getTopologyVariance() = "AlembicIPolyMeshSchema_getTopologyVariance";
+function Boolean AlembicIPolyMeshSchema.isConstant() = "AlembicIPolyMeshSchema_isConstant";
+function AlembicIPolyMeshSchema.get?(io AlembicIPolyMeshSample sample, AlembicISampleSelector ss) = "AlembicIPolyMeshSchema_get";
+inline AlembicIPolyMeshSchema.get?(io AlembicIPolyMeshSample sample) { this.get(sample, AlembicISampleSelector(UInt32(0))); }
+function AlembicTimeSampling AlembicIPolyMeshSchema.getTimeSampling() = "AlembicIPolyMeshSchema_getTimeSampling";
+function UInt32 AlembicIPolyMeshSchema.getNumSamples() = "AlembicIPolyMeshSchema_getNumSamples";
+function AlembicICompoundProperty AlembicIPolyMeshSchema.getArbGeomParams() = "AlembicIPolyMeshSchema_getArbGeomParams";
+function AlembicICompoundProperty AlembicIPolyMeshSchema.getUserProperties() = "AlembicIPolyMeshSchema_getUserProperties";
+function AlembicIScalarProperty AlembicIPolyMeshSchema.getChildBoundsProperty() = "AlembicIPolyMeshSchema_getChildBoundsProperty";
+function AlembicIVec2VfGeomParam AlembicIPolyMeshSchema.getUVsParam() = "AlembicIPolyMeshSchema_getUVsParam";
+function AlembicIVec3NfGeomParam AlembicIPolyMeshSchema.getNormalsParam() = "AlembicIPolyMeshSchema_getNormalsParam";
+function AlembicIArrayProperty AlembicIPolyMeshSchema.getFaceCountsProperty() = "AlembicIPolyMeshSchema_getFaceCountsProperty";
+function AlembicIArrayProperty AlembicIPolyMeshSchema.getFaceIndicesProperty() = "AlembicIPolyMeshSchema_getFaceIndicesProperty";
+function AlembicIArrayProperty AlembicIPolyMeshSchema.getPositionsProperty() = "AlembicIPolyMeshSchema_getPositionsProperty";
+function AlembicIArrayProperty AlembicIPolyMeshSchema.getVelocitiesProperty() = "AlembicIPolyMeshSchema_getVelocitiesProperty";
+function String[] AlembicIPolyMeshSchema.getFaceSetNames() = "AlembicIPolyMeshSchema_getFaceSetNames";
+function AlembicIFaceSet AlembicIPolyMeshSchema.getFaceSet(String name) = "AlembicIPolyMeshSchema_getFaceSet";
+function Boolean AlembicIPolyMeshSchema.hasFaceSet(String name) = "AlembicIPolyMeshSchema_hasFaceSet";

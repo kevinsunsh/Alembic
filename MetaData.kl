@@ -1,0 +1,24 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicMetaData {
+  Data handle;
+};
+
+function AlembicMetaData() = "AlembicMetaData_construct";
+function ~AlembicMetaData() = "AlembicMetaData_free";
+
+function AlembicMetaData.deserialize!(String from) = "AlembicMetaData_deserialize";
+function String AlembicMetaData.serialize() = "AlembicMetaData_serialize";
+function UInt32 AlembicMetaData.size() = "AlembicMetaData_size";
+function String[] AlembicMetaData.keys() = "AlembicMetaData_keys";
+function AlembicMetaData.set!(String key, String data) = "AlembicMetaData_set";
+function AlembicMetaData.setUnique!(String key, String data) = "AlembicMetaData_setUnique";
+function String AlembicMetaData.get(String key) = "AlembicMetaData_get";
+function String AlembicMetaData.getRequired(String key) = "AlembicMetaData_getRequired";
+function AlembicMetaData.append!(AlembicMetaData metaData) = "AlembicMetaData_append";
+function AlembicMetaData.appendUnique!(AlembicMetaData metaData) = "AlembicMetaData_appendUnique";
+function Boolean AlembicMetaData.matches(AlembicMetaData metaData) = "AlembicMetaData_matches";
+function Boolean AlembicMetaData.matchesOverlap(AlembicMetaData metaData) = "AlembicMetaData_matchesOverlap";
+function Boolean AlembicMetaData.matchesExactly(AlembicMetaData metaData) = "AlembicMetaData_matchesExactly";

@@ -1,0 +1,22 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIXformSchema {
+  Data handle;
+};
+
+function AlembicIXformSchema() = "AlembicIXformSchema_construct";
+function ~AlembicIXformSchema() = "AlembicIXformSchema_free";
+function Boolean AlembicIXformSchema.valid() = "AlembicIXformSchema_valid";
+function AlembicIXformSchema.reset!() = "AlembicIXformSchema_free";
+
+function Boolean AlembicIXformSchema.isConstant() = "AlembicIXformSchema_isConstant";
+function Boolean AlembicIXformSchema.isConstantIdentity() = "AlembicIXformSchema_isConstantIdentity";
+function AlembicIXformSchema.get?(io AlembicXformSample sample, AlembicISampleSelector ss) = "AlembicIXformSchema_get";
+inline AlembicIXformSchema.get?(io AlembicXformSample sample) { this.get(sample, AlembicISampleSelector(0)); }
+function AlembicTimeSampling AlembicIXformSchema.getTimeSampling() = "AlembicIXformSchema_getTimeSampling";
+function UInt32 AlembicIXformSchema.getNumSamples() = "AlembicIXformSchema_getNumSamples";
+function AlembicICompoundProperty AlembicIXformSchema.getArbGeomParams() = "AlembicIXformSchema_getArbGeomParams";
+function AlembicICompoundProperty AlembicIXformSchema.getUserProperties() = "AlembicIXformSchema_getUserProperties";
+function AlembicIScalarProperty AlembicIXformSchema.getChildBoundsProperty() = "AlembicIXformSchema_getChildBoundsProperty";

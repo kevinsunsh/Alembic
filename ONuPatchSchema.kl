@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicONuPatchSchema {
+  Data handle;
+};
+
+function AlembicONuPatchSchema() = "AlembicONuPatchSchema_construct";
+function ~AlembicONuPatchSchema() = "AlembicONuPatchSchema_free";
+function Boolean AlembicONuPatchSchema.valid() = "AlembicONuPatchSchema_valid";
+function AlembicONuPatchSchema.reset!() = "AlembicONuPatchSchema_free";
+
+function AlembicTimeSampling AlembicONuPatchSchema.getTimeSampling() = "AlembicONuPatchSchema_getTimeSampling";
+function UInt32 AlembicONuPatchSchema.getNumSamples() = "AlembicONuPatchSchema_getNumSamples";
+function AlembicONuPatchSchema.set!(AlembicONuPatchSample sample) = "AlembicONuPatchSchema_set";
+function AlembicONuPatchSchema.setFromPrevious!() = "AlembicONuPatchSchema_setFromPrevious";
+function AlembicONuPatchSchema.setTimeSampling!(UInt32 index) = "AlembicONuPatchSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicONuPatchSchema.getArbGeomParams() = "AlembicONuPatchSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicONuPatchSchema.getUserProperties() = "AlembicONuPatchSchema_getUserProperties";
+function AlembicOScalarProperty AlembicONuPatchSchema.getChildBoundsProperty() = "AlembicONuPatchSchema_getChildBoundsProperty";

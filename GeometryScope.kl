@@ -1,0 +1,11 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+alias UInt32 AlembicGeometryScope;
+const AlembicGeometryScope Alembic_kConstantScope = 0;
+const AlembicGeometryScope Alembic_kUniformScope = 1;
+const AlembicGeometryScope Alembic_kVaryingScope = 2;
+const AlembicGeometryScope Alembic_kVertexScope = 3;
+const AlembicGeometryScope Alembic_kFacevaryingScope = 4;
+const AlembicGeometryScope Alembic_kUnknownScope = 127;

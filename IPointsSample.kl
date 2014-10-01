@@ -1,0 +1,17 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIPointsSample {
+  Data handle;
+};
+
+function AlembicIPointsSample() = "AlembicIPointsSample_construct";
+function ~AlembicIPointsSample() = "AlembicIPointsSample_free";
+function Boolean AlembicIPointsSample.valid() = "AlembicIPointsSample_valid";
+function AlembicIPointsSample.reset!() = "AlembicIPointsSample_free";
+
+function Vec3<> AlembicIPointsSample.getPositions() = "AlembicIPointsSample_getPositions";
+function UInt64<> AlembicIPointsSample.getIds() = "AlembicIPointsSample_getIds";
+function Vec3<> AlembicIPointsSample.getVelocities() = "AlembicIPointsSample_getVelocities";
+function Box3 AlembicIPointsSample.getSelfBounds() = "AlembicIPointsSample_getSelfBounds";

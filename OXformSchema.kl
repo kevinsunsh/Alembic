@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOXformSchema {
+  Data handle;
+};
+
+function AlembicOXformSchema() = "AlembicOXformSchema_construct";
+function ~AlembicOXformSchema() = "AlembicOXformSchema_free";
+function Boolean AlembicOXformSchema.valid() = "AlembicOXformSchema_valid";
+function AlembicOXformSchema.reset!() = "AlembicOXformSchema_free";
+
+function AlembicTimeSampling AlembicOXformSchema.getTimeSampling() = "AlembicOXformSchema_getTimeSampling";
+function UInt32 AlembicOXformSchema.getNumSamples() = "AlembicOXformSchema_getNumSamples";
+function AlembicOXformSchema.set!(AlembicXformSample sample) = "AlembicOXformSchema_set";
+function AlembicOXformSchema.setFromPrevious!() = "AlembicOXformSchema_setFromPrevious";
+function AlembicOXformSchema.setTimeSampling!(UInt32 index) = "AlembicOXformSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicOXformSchema.getArbGeomParams() = "AlembicOXformSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOXformSchema.getUserProperties() = "AlembicOXformSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOXformSchema.getChildBoundsProperty() = "AlembicOXformSchema_getChildBoundsProperty";

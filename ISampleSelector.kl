@@ -1,0 +1,26 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicISampleSelector {
+  Data handle;
+};
+
+alias UInt32 AlembicTimeIndexType;
+const AlembicTimeIndexType Alembic_kFloorIndex = 0;
+const AlembicTimeIndexType Alembic_kCeilIndex = 1;
+const AlembicTimeIndexType Alembic_kNearIndex = 2;
+
+function AlembicISampleSelector() = "AlembicISampleSelector_construct";
+function ~AlembicISampleSelector() = "AlembicISampleSelector_free";
+
+function AlembicISampleSelector(UInt32 reqIdx) = "AlembicISampleSelector_constructFromReqIdx";
+function AlembicISampleSelector(Float64 reqTime, AlembicTimeIndexType reqIdxType) = "AlembicISampleSelector_constructFromReqTime";
+inline AlembicISampleSelector(Float32 reqTime) { this = AlembicISampleSelector(reqTime, Alembic_kNearIndex); }
+inline AlembicISampleSelector(Float64 reqTime) { this = AlembicISampleSelector(reqTime, Alembic_kNearIndex); }
+inline AlembicISampleSelector(Integer reqIdx) { this = AlembicISampleSelector(UInt32(reqIdx)); }
+
+function UInt32 AlembicISampleSelector.getRequestedIndex() = "AlembicISampleSelector_getRequestedIndex";
+function Float64 AlembicISampleSelector.getRequestedTime() = "AlembicISampleSelector_getRequestedTime";
+function AlembicTimeIndexType AlembicISampleSelector.getRequestedTimeIndexType() = "AlembicISampleSelector_getRequestedTimeIndexType";
+function UInt32 AlembicISampleSelector.getIndex(AlembicTimeSampling timeSampling, UInt32 numSamples) = "AlembicISampleSelector_getIndex";

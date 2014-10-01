@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIArchive {
+  Data handle;
+};
+
+function AlembicIArchive() = "AlembicIArchive_construct";
+function ~AlembicIArchive() = "AlembicIArchive_free";
+function Boolean AlembicIArchive.valid() = "AlembicIArchive_valid";
+function AlembicIArchive.reset!() = "AlembicIArchive_free";
+
+function AlembicIArchive(in String fileName) = "AlembicIArchive_constructFromString";
+
+function String AlembicIArchive.getName() = "AlembicIArchive_getName";
+function AlembicIObject AlembicIArchive.getTop() = "AlembicIArchive_getTop";
+function UInt32 AlembicIArchive.getNumTimeSamplings() = "AlembicIArchive_getNumTimeSamplings";
+function AlembicTimeSampling AlembicIArchive.getTimeSampling(UInt32 index) = "AlembicIArchive_getTimeSampling";
+function UInt32 AlembicIArchive.getMaxNumSamplesForTimeSamplingIndex(UInt32 iIndex) = "AlembicIArchive_getMaxNumSamplesForTimeSamplingIndex";
+function UInt32 AlembicIArchive.getArchiveVersion() = "AlembicIArchive_getArchiveVersion";

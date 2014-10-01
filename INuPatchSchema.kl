@@ -1,0 +1,32 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicINuPatchSchema {
+  Data handle;
+};
+
+function AlembicINuPatchSchema() = "AlembicINuPatchSchema_construct";
+function ~AlembicINuPatchSchema() = "AlembicINuPatchSchema_free";
+function Boolean AlembicINuPatchSchema.valid() = "AlembicINuPatchSchema_valid";
+function AlembicINuPatchSchema.reset!() = "AlembicINuPatchSchema_free";
+
+function AlembicMeshTopologyVariance AlembicINuPatchSchema.getTopologyVariance() = "AlembicINuPatchSchema_getTopologyVariance";
+function Boolean AlembicINuPatchSchema.isConstant() = "AlembicINuPatchSchema_isConstant";
+function AlembicINuPatchSchema.get?(io AlembicINuPatchSample sample, AlembicISampleSelector ss) = "AlembicINuPatchSchema_get";
+inline AlembicINuPatchSchema.get?(io AlembicINuPatchSample sample) { this.get(sample, AlembicISampleSelector(UInt32(0))); }
+function AlembicTimeSampling AlembicINuPatchSchema.getTimeSampling() = "AlembicINuPatchSchema_getTimeSampling";
+function UInt32 AlembicINuPatchSchema.getNumSamples() = "AlembicINuPatchSchema_getNumSamples";
+function AlembicICompoundProperty AlembicINuPatchSchema.getArbGeomParams() = "AlembicINuPatchSchema_getArbGeomParams";
+function AlembicICompoundProperty AlembicINuPatchSchema.getUserProperties() = "AlembicINuPatchSchema_getUserProperties";
+function AlembicIScalarProperty AlembicINuPatchSchema.getChildBoundsProperty() = "AlembicINuPatchSchema_getChildBoundsProperty";
+function AlembicIArrayProperty AlembicINuPatchSchema.getPositionsProperty() = "AlembicINuPatchSchema_getPositionsProperty";
+function AlembicIArrayProperty AlembicINuPatchSchema.getUKnotsProperty() = "AlembicINuPatchSchema_getUKnotsProperty";
+function AlembicIArrayProperty AlembicINuPatchSchema.getVKnotsProperty() = "AlembicINuPatchSchema_getVKnotsProperty";
+function AlembicIArrayProperty AlembicINuPatchSchema.getVelocitiesProperty() = "AlembicINuPatchSchema_getVelocitiesProperty";
+function AlembicIArrayProperty AlembicINuPatchSchema.getPositionWeightsProperty() = "AlembicINuPatchSchema_getPositionWeightsProperty";
+function AlembicIVec2VfGeomParam AlembicINuPatchSchema.getUVsParam() = "AlembicINuPatchSchema_getUVsParam";
+function AlembicIVec3NfGeomParam AlembicINuPatchSchema.getNormalsParam() = "AlembicINuPatchSchema_getNormalsParam";
+function Boolean AlembicINuPatchSchema.hasTrimCurve() = "AlembicINuPatchSchema_hasTrimCurve";
+function Boolean AlembicINuPatchSchema.trimCurveTopologyIsHomogenous() = "AlembicINuPatchSchema_trimCurveTopologyIsHomogenous";
+function Boolean AlembicINuPatchSchema.trimCurveTopologyIsConstant() = "AlembicINuPatchSchema_trimCurveTopologyIsConstant";

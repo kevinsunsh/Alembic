@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOFaceSetSchema {
+  Data handle;
+};
+
+function AlembicOFaceSetSchema() = "AlembicOFaceSetSchema_construct";
+function ~AlembicOFaceSetSchema() = "AlembicOFaceSetSchema_free";
+function Boolean AlembicOFaceSetSchema.valid() = "AlembicOFaceSetSchema_valid";
+function AlembicOFaceSetSchema.reset!() = "AlembicOFaceSetSchema_free";
+
+function UInt32 AlembicOFaceSetSchema.getNumSamples() = "AlembicOFaceSetSchema_getNumSamples";
+function AlembicOFaceSetSchema.set!(AlembicOFaceSetSample sample) = "AlembicOFaceSetSchema_set";
+function AlembicOFaceSetSchema.setTimeSampling!(UInt32 index) = "AlembicOFaceSetSchema_setTimeSampling";
+function AlembicOFaceSetSchema.setFaceExclusivity!(AlembicFaceSetExclusivity facesExclusive) = "AlembicOFaceSetSchema_setFaceExclusivity";
+function AlembicFaceSetExclusivity AlembicOFaceSetSchema.getFaceExclusivity() = "AlembicOFaceSetSchema_getFaceExclusivity";
+function AlembicOCompoundProperty AlembicOFaceSetSchema.getArbGeomParams() = "AlembicOFaceSetSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOFaceSetSchema.getUserProperties() = "AlembicOFaceSetSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOFaceSetSchema.getChildBoundsProperty() = "AlembicOFaceSetSchema_getChildBoundsProperty";

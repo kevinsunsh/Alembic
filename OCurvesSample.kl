@@ -1,0 +1,37 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOCurvesSample {
+  Data handle;
+};
+
+function AlembicOCurvesSample() = "AlembicOCurvesSample_construct";
+function ~AlembicOCurvesSample() = "AlembicOCurvesSample_free";
+
+function AlembicOFloat32GeomParamSample AlembicOCurvesSample.getWidths() = "AlembicOCurvesSample_getWidths";
+function AlembicOCurvesSample.setWidths!(AlembicOFloat32GeomParamSample values) = "AlembicOCurvesSample_setWidths";
+function Vec3<> AlembicOCurvesSample.getPositions() = "AlembicOCurvesSample_getPositions";
+function AlembicOCurvesSample.setPositions!(Vec3 values<>) = "AlembicOCurvesSample_setPositions";
+function AlembicOCurvesSample.setType!(AlembicCurveType curveType) = "AlembicOCurvesSample_setType";
+function AlembicCurveType AlembicOCurvesSample.getType() = "AlembicOCurvesSample_getType";
+function AlembicOCurvesSample.setWrap!(AlembicCurvePeriodicity wrap) = "AlembicOCurvesSample_setWrap";
+function AlembicCurvePeriodicity AlembicOCurvesSample.getWrap() = "AlembicOCurvesSample_getWrap";
+function UInt32 AlembicOCurvesSample.getNumCurves() = "AlembicOCurvesSample_getNumCurves";
+function AlembicOCurvesSample.setCurvesNumVertices!(SInt32 values<>) = "AlembicOCurvesSample_setCurvesNumVertices";
+function SInt32<> AlembicOCurvesSample.getCurvesNumVertices() = "AlembicOCurvesSample_getCurvesNumVertices";
+function AlembicOVec2VfGeomParamSample AlembicOCurvesSample.getUVs() = "AlembicOCurvesSample_getUVs";
+function AlembicOCurvesSample.setUVs!(AlembicOVec2VfGeomParamSample values) = "AlembicOCurvesSample_setUVs";
+function Box3 AlembicOCurvesSample.getSelfBounds() = "AlembicOCurvesSample_getSelfBounds";
+function AlembicOCurvesSample.setSelfBounds!(Box3 bounds) = "AlembicOCurvesSample_setSelfBounds";
+function Vec3<> AlembicOCurvesSample.getVelocities() = "AlembicOCurvesSample_getVelocities";
+function AlembicOCurvesSample.setVelocities!(Vec3 values<>) = "AlembicOCurvesSample_setVelocities";
+function AlembicOVec3NfGeomParamSample AlembicOCurvesSample.getNormals() = "AlembicOCurvesSample_getNormals";
+function AlembicOCurvesSample.setNormals!(AlembicOVec3NfGeomParamSample values) = "AlembicOCurvesSample_setNormals";
+function AlembicOCurvesSample.setBasis!(AlembicBasisType basis) = "AlembicOCurvesSample_setBasis";
+function AlembicBasisType AlembicOCurvesSample.getBasis() = "AlembicOCurvesSample_getBasis";
+function AlembicOCurvesSample.setKnots!(Float32 values<>) = "AlembicOCurvesSample_setKnots";
+function Float32<> AlembicOCurvesSample.getKnots() = "AlembicOCurvesSample_getKnots";
+function AlembicOCurvesSample.setOrders!(UInt8 values<>) = "AlembicOCurvesSample_setOrders";
+function UInt8<> AlembicOCurvesSample.getOrders() = "AlembicOCurvesSample_getOrders";
+

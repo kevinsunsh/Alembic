@@ -1,0 +1,34 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicINuPatchSample {
+  Data handle;
+};
+
+function AlembicINuPatchSample() = "AlembicINuPatchSample_construct";
+function ~AlembicINuPatchSample() = "AlembicINuPatchSample_free";
+function Boolean AlembicINuPatchSample.valid() = "AlembicINuPatchSample_valid";
+function AlembicINuPatchSample.reset!() = "AlembicINuPatchSample_free";
+
+function Vec3<> AlembicINuPatchSample.getPositions() = "AlembicINuPatchSample_getPositions";
+function Float32<> AlembicINuPatchSample.getPositionWeights() = "AlembicINuPatchSample_getPositionWeights";
+function SInt32 AlembicINuPatchSample.getNumU() = "AlembicINuPatchSample_getNumU";
+function SInt32 AlembicINuPatchSample.getNumV() = "AlembicINuPatchSample_getNumV";
+function SInt32 AlembicINuPatchSample.getUOrder() = "AlembicINuPatchSample_getUOrder";
+function SInt32 AlembicINuPatchSample.getVOrder() = "AlembicINuPatchSample_getVOrder";
+function Float32<> AlembicINuPatchSample.getUKnot() = "AlembicINuPatchSample_getUKnot";
+function Float32<> AlembicINuPatchSample.getVKnot() = "AlembicINuPatchSample_getVKnot";
+function Box3 AlembicINuPatchSample.getSelfBounds() = "AlembicINuPatchSample_getSelfBounds";
+function Vec3<> AlembicINuPatchSample.getVelocities() = "AlembicINuPatchSample_getVelocities";
+function SInt32 AlembicINuPatchSample.getTrimNumLoops() = "AlembicINuPatchSample_getTrimNumLoops";
+function SInt32<> AlembicINuPatchSample.getTrimNumCurves() = "AlembicINuPatchSample_getTrimNumCurves";
+function SInt32<> AlembicINuPatchSample.getTrimNumVertices() = "AlembicINuPatchSample_getTrimNumVertices";
+function SInt32<> AlembicINuPatchSample.getTrimOrders() = "AlembicINuPatchSample_getTrimOrders";
+function Float32<> AlembicINuPatchSample.getTrimKnots() = "AlembicINuPatchSample_getTrimKnots";
+function Float32<> AlembicINuPatchSample.getTrimMins() = "AlembicINuPatchSample_getTrimMins";
+function Float32<> AlembicINuPatchSample.getTrimMaxes() = "AlembicINuPatchSample_getTrimMaxes";
+function Float32<> AlembicINuPatchSample.getTrimU() = "AlembicINuPatchSample_getTrimU";
+function Float32<> AlembicINuPatchSample.getTrimV() = "AlembicINuPatchSample_getTrimV";
+function Float32<> AlembicINuPatchSample.getTrimW() = "AlembicINuPatchSample_getTrimW";
+function Boolean AlembicINuPatchSample.hasTrimCurve() = "AlembicINuPatchSample_hasTrimCurve";

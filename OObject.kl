@@ -1,0 +1,26 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOObject {
+  Data handle;
+};
+
+function AlembicOObject() = "AlembicOObject_construct";
+function ~AlembicOObject() = "AlembicOObject_free";
+function Boolean AlembicOObject.valid() = "AlembicOObject_valid";
+function AlembicOObject.reset!() = "AlembicOObject_free";
+
+function AlembicOObject(AlembicOObject parent, String name) = "AlembicOObject_constructFrom2Args";
+
+function String AlembicOObject.getName() = "AlembicOObject_getName";
+function String AlembicOObject.getFullName() = "AlembicOObject_getFullName";
+function AlembicMetaData AlembicOObject.getMetaData() = "AlembicOObject_getMetaData";
+function AlembicOArchive AlembicOObject.getArchive() = "AlembicOObject_getArchive";
+function AlembicOObject AlembicOObject.getParent() = "AlembicOObject_getParent";
+function UInt32 AlembicOObject.getNumChildren() = "AlembicOObject_getNumChildren";
+function AlembicOCompoundProperty AlembicOObject.getProperties() = "AlembicOObject_getProperties";
+function AlembicOObject AlembicOObject.getChild(UInt32 childIndex ) = "AlembicOObject_getChild";
+function AlembicOObject AlembicOObject.getChild(String childName ) = "AlembicOObject_getChild_byName";
+function AlembicOObject.addChildInstance!(AlembicOObject target, String name) = "AlembicOObject_addChildInstance";
+

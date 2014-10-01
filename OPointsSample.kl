@@ -1,0 +1,21 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOPointsSample {
+  Data handle;
+};
+
+function AlembicOPointsSample() = "AlembicOPointsSample_construct";
+function ~AlembicOPointsSample() = "AlembicOPointsSample_free";
+
+function Vec3<> AlembicOPointsSample.getPositions() = "AlembicOPointsSample_getPositions";
+function AlembicOPointsSample.setPositions!(Vec3 values<>) = "AlembicOPointsSample_setPositions";
+function UInt64<> AlembicOPointsSample.getIds() = "AlembicOPointsSample_getIds";
+function AlembicOPointsSample.setIds!(UInt64 values<>) = "AlembicOPointsSample_setIds";
+function Vec3<> AlembicOPointsSample.getVelocities() = "AlembicOPointsSample_getVelocities";
+function AlembicOPointsSample.setVelocities!(Vec3 values<>) = "AlembicOPointsSample_setVelocities";
+function AlembicOFloat32GeomParamSample AlembicOPointsSample.getWidths() = "AlembicOPointsSample_getWidths";
+function AlembicOPointsSample.setWidths!(AlembicOFloat32GeomParamSample values) = "AlembicOPointsSample_setWidths";
+function Box3 AlembicOPointsSample.getSelfBounds() = "AlembicOPointsSample_getSelfBounds";
+function AlembicOPointsSample.setSelfBounds!(Box3 bounds) = "AlembicOPointsSample_setSelfBounds";

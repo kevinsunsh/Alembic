@@ -1,0 +1,36 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicTimeSampling {
+  Data handle;
+};
+
+struct AlembicTimeSamplingPair {
+  UInt32 index;
+  Float64 time;
+};
+
+function Boolean == (AlembicTimeSamplingPair a, AlembicTimeSamplingPair b) {
+  return a.index == b.index && abs(a.time - b.time) < 0.0001;
+}
+
+function Boolean != (AlembicTimeSamplingPair a, AlembicTimeSamplingPair b) {
+  return a.index != b.index || abs(a.time - b.time) >= 0.0001;
+}
+
+const SInt32 Alembic_kConstantTimeSampling = 0;
+
+function AlembicTimeSampling() = "AlembicTimeSampling_construct";
+function ~AlembicTimeSampling() = "AlembicTimeSampling_free";
+
+function AlembicTimeSampling( AlembicTimeSamplingType samplingType, Float64 sampleTimes[] ) = "AlembicTimeSampling_constructFromSamplingType";
+function AlembicTimeSampling( Float64 timePerCycle, Float64 startTime ) = "AlembicTimeSampling_constructFromStartTime";
+
+function UInt32 AlembicTimeSampling.getNumStoredTimes() = "AlembicTimeSampling_getNumStoredTimes";
+function Float64[] AlembicTimeSampling.getStoredTimes() = "AlembicTimeSampling_getStoredTimes";
+function AlembicTimeSamplingType AlembicTimeSampling.getTimeSamplingType() = "AlembicTimeSampling_getTimeSamplingType";
+function Float64 AlembicTimeSampling.getSampleTime(UInt32 index) = "AlembicTimeSampling_getSampleTime";
+function AlembicTimeSamplingPair AlembicTimeSampling.getFloorIndex(Float64 time, UInt32 numSamples) = "AlembicTimeSampling_getFloorIndex";
+function AlembicTimeSamplingPair AlembicTimeSampling.getCeilIndex(Float64 time, UInt32 numSamples) = "AlembicTimeSampling_getCeilIndex";
+function AlembicTimeSamplingPair AlembicTimeSampling.getNearIndex(Float64 time, UInt32 numSamples) = "AlembicTimeSampling_getNearIndex";

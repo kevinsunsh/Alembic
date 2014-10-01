@@ -1,0 +1,26 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIFaceSetSchema {
+  Data handle;
+};
+
+alias UInt32 AlembicFaceSetExclusivity;
+const AlembicFaceSetExclusivity Alembic_kFaceSetNonExclusive = 0;
+const AlembicFaceSetExclusivity Alembic_kFaceSetExclusive = 1;
+
+function AlembicIFaceSetSchema() = "AlembicIFaceSetSchema_construct";
+function ~AlembicIFaceSetSchema() = "AlembicIFaceSetSchema_free";
+function Boolean AlembicIFaceSetSchema.valid() = "AlembicIFaceSetSchema_valid";
+function AlembicIFaceSetSchema.reset!() = "AlembicIFaceSetSchema_free";
+
+function Boolean AlembicIFaceSetSchema.isConstant() = "AlembicIFaceSetSchema_isConstant";
+function AlembicIFaceSetSchema.get?(io AlembicIFaceSetSample sample, AlembicISampleSelector ss) = "AlembicIFaceSetSchema_get";
+inline AlembicIFaceSetSchema.get?(io AlembicIFaceSetSample sample) { this.get(sample, AlembicISampleSelector(UInt32(0))); }
+function AlembicTimeSampling AlembicIFaceSetSchema.getTimeSampling() = "AlembicIFaceSetSchema_getTimeSampling";
+function UInt32 AlembicIFaceSetSchema.getNumSamples() = "AlembicIFaceSetSchema_getNumSamples";
+function AlembicICompoundProperty AlembicIFaceSetSchema.getArbGeomParams() = "AlembicIFaceSetSchema_getArbGeomParams";
+function AlembicICompoundProperty AlembicIFaceSetSchema.getUserProperties() = "AlembicIFaceSetSchema_getUserProperties";
+function AlembicIScalarProperty AlembicIFaceSetSchema.getChildBoundsProperty() = "AlembicIFaceSetSchema_getChildBoundsProperty";
+function AlembicFaceSetExclusivity AlembicIFaceSetSchema.getFaceExclusivity() = "AlembicIFaceSetSchema_getFaceExclusivity";

@@ -1,0 +1,40 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicISubDSchema {
+  Data handle;
+};
+
+function AlembicISubDSchema() = "AlembicISubDSchema_construct";
+function ~AlembicISubDSchema() = "AlembicISubDSchema_free";
+function Boolean AlembicISubDSchema.valid() = "AlembicISubDSchema_valid";
+function AlembicISubDSchema.reset!() = "AlembicISubDSchema_free";
+
+function AlembicMeshTopologyVariance AlembicISubDSchema.getTopologyVariance() = "AlembicISubDSchema_getTopologyVariance";
+function Boolean AlembicISubDSchema.isConstant() = "AlembicISubDSchema_isConstant";
+function AlembicISubDSchema.get?(io AlembicISubDSample sample, AlembicISampleSelector ss) = "AlembicISubDSchema_get";
+inline AlembicISubDSchema.get?(io AlembicISubDSample sample) { this.get(sample, AlembicISampleSelector(UInt32(0))); }
+function AlembicTimeSampling AlembicISubDSchema.getTimeSampling() = "AlembicISubDSchema_getTimeSampling";
+function UInt32 AlembicISubDSchema.getNumSamples() = "AlembicISubDSchema_getNumSamples";
+function AlembicICompoundProperty AlembicISubDSchema.getArbGeomParams() = "AlembicISubDSchema_getArbGeomParams";
+function AlembicICompoundProperty AlembicISubDSchema.getUserProperties() = "AlembicISubDSchema_getUserProperties";
+function AlembicIScalarProperty AlembicISubDSchema.getChildBoundsProperty() = "AlembicISubDSchema_getChildBoundsProperty";
+function AlembicIVec2VfGeomParam AlembicISubDSchema.getUVsParam() = "AlembicISubDSchema_getUVsParam";
+function AlembicIArrayProperty AlembicISubDSchema.getFaceCountsProperty() = "AlembicISubDSchema_getFaceCountsProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getFaceIndicesProperty() = "AlembicISubDSchema_getFaceIndicesProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getPositionsProperty() = "AlembicISubDSchema_getPositionsProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getVelocitiesProperty() = "AlembicISubDSchema_getVelocitiesProperty";
+function AlembicIScalarProperty AlembicISubDSchema.getFaceVaryingInterpolateBoundaryProperty() = "AlembicISubDSchema_getFaceVaryingInterpolateBoundaryProperty";
+function AlembicIScalarProperty AlembicISubDSchema.getFaceVaryingPropagateCornersProperty() = "AlembicISubDSchema_getFaceVaryingPropagateCornersProperty";
+function AlembicIScalarProperty AlembicISubDSchema.getInterpolateBoundaryProperty() = "AlembicISubDSchema_getInterpolateBoundaryProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getCreaseIndicesProperty() = "AlembicISubDSchema_getCreaseIndicesProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getCreaseLengthsProperty() = "AlembicISubDSchema_getCreaseLengthsProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getCreaseSharpnessesProperty() = "AlembicISubDSchema_getCreaseSharpnessesProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getCornerIndicesProperty() = "AlembicISubDSchema_getCornerIndicesProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getCornerSharpnessesProperty() = "AlembicISubDSchema_getCornerSharpnessesProperty";
+function AlembicIArrayProperty AlembicISubDSchema.getHolesProperty() = "AlembicISubDSchema_getHolesProperty";
+function AlembicIScalarProperty AlembicISubDSchema.getSubdivisionSchemeProperty() = "AlembicISubDSchema_getSubdivisionSchemeProperty";
+function String[] AlembicISubDSchema.getFaceSetNames() = "AlembicISubDSchema_getFaceSetNames";
+function AlembicIFaceSet AlembicISubDSchema.getFaceSet(String name) = "AlembicISubDSchema_getFaceSet";
+function Boolean AlembicISubDSchema.hasFaceSet(String name) = "AlembicISubDSchema_hasFaceSet";

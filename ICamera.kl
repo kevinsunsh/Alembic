@@ -1,0 +1,20 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicICamera {
+  Data handle;
+};
+
+function AlembicICamera() = "AlembicICamera_construct";
+function ~AlembicICamera() = "AlembicICamera_free";
+function Boolean AlembicICamera.valid() = "AlembicICamera_valid";
+function AlembicICamera.reset!() = "AlembicICamera_free";
+
+function AlembicICamera(AlembicIObject obj) = "AlembicICamera_constructFromIObject";
+function AlembicIObject(AlembicICamera camera) = "AlembicIObject_constructFromICamera";
+inline AlembicIObject AlembicICamera.asIObject() { return AlembicIObject(this); }
+
+function Boolean AlembicICamera.matches(AlembicMetaData metaData) = "AlembicICamera_matches";
+function AlembicICameraSchema AlembicICamera.getSchema() = "AlembicICamera_getSchema";
+function AlembicICompoundProperty AlembicICamera.getProperties() = "AlembicICamera_getProperties";

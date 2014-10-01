@@ -1,0 +1,23 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicTimeSamplingType {
+  Data handle;
+};
+
+alias UInt32 AlembicAcyclicFlag;
+const AlembicAcyclicFlag Alembic_kAcyclic = 0;
+
+function AlembicTimeSamplingType() = "AlembicTimeSamplingType_construct";
+function ~AlembicTimeSamplingType() = "AlembicTimeSamplingType_free";
+
+function AlembicTimeSamplingType(Float64 timePerCycle) = "AlembicTimeSamplingType_constructFromFloat64";
+function AlembicTimeSamplingType(UInt32 numSamplesPerCycle, Float64 timePerCycle) = "AlembicTimeSamplingType_constructFromUInt32Float64";
+function AlembicTimeSamplingType(AlembicAcyclicFlag flag) = "AlembicTimeSamplingType_constructFromAcyclicFlag";
+
+function Boolean AlembicTimeSamplingType.isUniform() = "AlembicTimeSamplingType_isUniform";
+function Boolean AlembicTimeSamplingType.isCyclic() = "AlembicTimeSamplingType_isCyclic";
+function Boolean AlembicTimeSamplingType.isAcyclic() = "AlembicTimeSamplingType_isAcyclic";
+function UInt32 AlembicTimeSamplingType.getNumSamplesPerCycle() = "AlembicTimeSamplingType_getNumSamplesPerCycle";
+function Float64 AlembicTimeSamplingType.getTimePerCycle() = "AlembicTimeSamplingType_getTimePerCycle";

@@ -1,0 +1,15 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicIFaceSetSample {
+  Data handle;
+};
+
+function AlembicIFaceSetSample() = "AlembicIFaceSetSample_construct";
+function ~AlembicIFaceSetSample() = "AlembicIFaceSetSample_free";
+function Boolean AlembicIFaceSetSample.valid() = "AlembicIFaceSetSample_valid";
+function AlembicIFaceSetSample.reset!() = "AlembicIFaceSetSample_free";
+
+function SInt32<> AlembicIFaceSetSample.getFaces() = "AlembicIFaceSetSample_getFaces";
+function Box3 AlembicIFaceSetSample.getSelfBounds() = "AlembicIFaceSetSample_getSelfBounds";

@@ -1,0 +1,19 @@
+/*
+ *  Copyright 2010-2014 Fabric Software Inc. All rights reserved.
+ */
+
+object AlembicOLightSchema {
+  Data handle;
+};
+
+function AlembicOLightSchema() = "AlembicOLightSchema_construct";
+function ~AlembicOLightSchema() = "AlembicOLightSchema_free";
+function Boolean AlembicOLightSchema.valid() = "AlembicOLightSchema_valid";
+function AlembicOLightSchema.reset!() = "AlembicOLightSchema_free";
+
+function AlembicTimeSampling AlembicOLightSchema.getTimeSampling() = "AlembicOLightSchema_getTimeSampling";
+function UInt32 AlembicOLightSchema.getNumSamples() = "AlembicOLightSchema_getNumSamples";
+function AlembicOLightSchema.setTimeSampling!(UInt32 index) = "AlembicOLightSchema_setTimeSampling";
+function AlembicOCompoundProperty AlembicOLightSchema.getArbGeomParams() = "AlembicOLightSchema_getArbGeomParams";
+function AlembicOCompoundProperty AlembicOLightSchema.getUserProperties() = "AlembicOLightSchema_getUserProperties";
+function AlembicOScalarProperty AlembicOLightSchema.getChildBoundsProperty() = "AlembicOLightSchema_getChildBoundsProperty";
