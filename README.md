@@ -25,6 +25,7 @@ building
 ========
 
 A scons (http://www.scons.org/) build script is provided. Alembic depends on
+* A static build of IlmBase (http://www.openexr.com/downloads.html), version 2.2.0 or higher.
 * A static build of boost (http://www.boost.org/), version 1.55 or higher.
 * A static build of zlib (http://www.zlib.net/), version 1.2.8 or higher.
 * A static build of hdf5 (http://www.hdfgroup.org/HDF5/), version 1.8.7 or higher.
@@ -32,17 +33,32 @@ A scons (http://www.scons.org/) build script is provided. Alembic depends on
 
 To inform scons where to find the Fabric Engine includes as well as the thirdparty libraries, you need to set the following environment variables:
 
+* FABRIC_DIR: Should point to Fabric Engine's installation folder,
+* FABRIC_VERSION: Should note the current Fabric Version (for ex: 1.13.0),
+* FABRIC_BUILD_OS: The operating system to build for (Windows, Linux, Darwin),
+* FABRIC_BUILD_ARCH: The build architecture (usually x86_64).
+* FABRIC_BUILD_TYPE: The type of build to perform (Release or Debug).
 * FABRIC_EDK_DIR: Should point to Fabric Engine's EDK folder.
+* ILMBASE_INCLUDE: Should point to the Ilmbase include folder.
+* ILMBASE_LIBRARY_DIR: Should point to the Ilmbase library folder.
 * BOOST_INCLUDE: Should point to the boost include folder.
-* BOOST_LIBRARY: Should point to the boost library folder.
-* ZLIB_INCLUDE: Should point to the zlib include folder.
-* ZLIB_LIBRARY: Should point to the zlib library folder.
-* HDF5_INCLUDE: Should point to the hdf5 include folder.
-* HDF5_LIBRARY: Should point to the hdf5 library folder.
-* ALEMBIC_INCLUDE: Should point to the Alembic include folder.
-* ALEMBIC_LIBRARY: Should point to the Alembic library folder.
+* BOOST_LIBRARY_DIR: Should point to the boost library folder.
+* ZLIB_INCLUDE_DIR: Should point to the zlib include folder.
+* ZLIB_LIBRARY_DIR: Should point to the zlib library folder.
+* HDF5_INCLUDE_DIR: Should point to the hdf5 include folder.
+* HDF5_LIBRARY_DIR: Should point to the hdf5 library folder.
+* ALEMBIC_INCLUDE_DIR: Should point to the Alembic include folder.
+* ALEMBIC_LIBRARY_DIR: Should point to the Alembic library folder.
 
-The temporary files will be built into the *build* folder, while the structured output files will be placed in the *stage* folder.
+The temporary files will be built into the *.build* folder, while the structured output files will be placed in the *.stage* folder.
+
+To clean the build you can do
+
+    scons clean
+
+To perform a build with 8 processes, you can do
+
+    scons -j8
 
 testing
 =======

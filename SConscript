@@ -427,6 +427,8 @@ oneKLFile = env.Command(
   klFiles,
   catCommands
   )
+
+env.Append(CPPDEFINES = 'BOOST_NO_EXCEPTIONS=1')
 alembicExt = env.FabricExt(
   extName,
   cppFiles + oneKLFile,

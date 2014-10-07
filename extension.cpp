@@ -5,6 +5,15 @@
 ////////////////////////////////////////////////////////////////
 
 #include "Alembic.h"
+#include <boost/throw_exception.hpp>
+
 using namespace Fabric::EDK;
 IMPLEMENT_FABRIC_EDK_ENTRIES( Alembic )
 
+namespace boost
+{
+  void throw_exception(std::exception const & e)
+  {
+    Fabric::EDK::throwException(e.what());
+  }
+}
